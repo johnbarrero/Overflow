@@ -96,7 +96,6 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Deb
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.AssemblyInfoInputs.cache
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.AssemblyInfo.cs
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.csproj.CoreCompileInputs.cache
-C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Aspire\references\.ProjectMetadata.g.cs
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Aspire\references\_AppHost.ProjectMetadata.g.cs
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.2A6891A2.Up2Date
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.dll
@@ -105,3 +104,5 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Deb
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.genruntimeconfig.cache
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\ref\Overflow.AppHost.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\bin\Debug\net10.0\Aspire.Hosting.Keycloak.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Aspire\references\QuestionService.ProjectMetadata.g.cs
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.AppHost\obj\Debug\net10.0\Overflow.AppHost.sourcelink.json
