@@ -23,7 +23,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+068a511534085d92250153368c4152008bfc5e32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3ee80e063db02caa817e4443c18394c761f793d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

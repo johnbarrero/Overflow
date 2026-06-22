@@ -1,0 +1,13 @@
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\bin\Debug\net10.0\Overflow.ServiceDefaults.deps.json
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\bin\Debug\net10.0\Overflow.ServiceDefaults.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\bin\Debug\net10.0\Overflow.ServiceDefaults.pdb
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.AssemblyInfo.cs
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.sourcelink.json
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\refint\Overflow.ServiceDefaults.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\Overflow.ServiceDefaults.pdb
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\Overflow.ServiceDefaults\obj\Debug\net10.0\ref\Overflow.ServiceDefaults.dll
