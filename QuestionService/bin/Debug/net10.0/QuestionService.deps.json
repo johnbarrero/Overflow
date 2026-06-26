@@ -8,29 +8,32 @@
     ".NETCoreApp,Version=v10.0": {
       "QuestionService/1.0.0": {
         "dependencies": {
-          "Aspire.Keycloak.Authentication": "13.4.5-preview.1.26316.12",
-          "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": "13.4.5",
+          "Aspire.Keycloak.Authentication": "13.4.6-preview.1.26319.6",
+          "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": "13.4.6",
+          "Contracts": "1.0.0",
           "Microsoft.AspNetCore.OpenApi": "10.0.9",
           "Microsoft.EntityFrameworkCore.Design": "10.0.9",
-          "Overflow.ServiceDefaults": "1.0.0"
+          "Overflow.ServiceDefaults": "1.0.0",
+          "WolverineFx.RabbitMQ": "6.14.0",
+          "WolverineFx.RuntimeCompilation": "6.14.0"
         },
         "runtime": {
           "QuestionService.dll": {}
         }
       },
-      "Aspire.Keycloak.Authentication/13.4.5-preview.1.26316.12": {
+      "Aspire.Keycloak.Authentication/13.4.6-preview.1.26319.6": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": "10.0.8",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "10.0.8"
         },
         "runtime": {
           "lib/net10.0/Aspire.Keycloak.Authentication.dll": {
-            "assemblyVersion": "13.4.5.0",
-            "fileVersion": "13.400.526.31612"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
           }
         }
       },
-      "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.4.5": {
+      "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.4.6": {
         "dependencies": {
           "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": "10.0.8",
           "Npgsql.DependencyInjection": "10.0.2",
@@ -40,8 +43,16 @@
         },
         "runtime": {
           "lib/net10.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
-            "assemblyVersion": "13.4.5.0",
-            "fileVersion": "13.400.526.31612"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
+          }
+        }
+      },
+      "FastExpressionCompiler/5.4.1": {
+        "runtime": {
+          "lib/net9.0/FastExpressionCompiler.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
           }
         }
       },
@@ -50,6 +61,45 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "JasperFx/2.13.0": {
+        "dependencies": {
+          "FastExpressionCompiler": "5.4.1",
+          "Microsoft.Bcl.TimeProvider": "10.0.0",
+          "Polly.Core": "8.6.5",
+          "Spectre.Console": "0.55.0"
+        },
+        "runtime": {
+          "lib/net10.0/JasperFx.dll": {
+            "assemblyVersion": "2.13.0.0",
+            "fileVersion": "2.13.0.0"
+          }
+        }
+      },
+      "JasperFx.Events/2.13.0": {
+        "dependencies": {
+          "JasperFx": "2.13.0"
+        },
+        "runtime": {
+          "lib/net10.0/JasperFx.Events.dll": {
+            "assemblyVersion": "2.13.0.0",
+            "fileVersion": "2.13.0.0"
+          }
+        }
+      },
+      "JasperFx.RuntimeCompiler/5.0.0": {
+        "dependencies": {
+          "JasperFx": "2.13.0",
+          "Microsoft.CodeAnalysis": "5.0.0",
+          "Microsoft.CodeAnalysis.CSharp": "5.0.0",
+          "Microsoft.CodeAnalysis.Scripting": "5.0.0"
+        },
+        "runtime": {
+          "lib/net10.0/JasperFx.RuntimeCompiler.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
           }
         }
       },
@@ -86,12 +136,37 @@
           }
         }
       },
+      "Microsoft.Bcl.AsyncInterfaces/9.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.52809"
+          }
+        }
+      },
+      "Microsoft.Bcl.TimeProvider/10.0.0": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Bcl.TimeProvider.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.52411"
+          }
+        }
+      },
       "Microsoft.Build.Framework/18.0.2": {
         "runtime": {
           "lib/net10.0/Microsoft.Build.Framework.dll": {
             "assemblyVersion": "15.1.0.0",
             "fileVersion": "18.0.2.52102"
           }
+        }
+      },
+      "Microsoft.CodeAnalysis/5.0.0": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.Bcl.AsyncInterfaces": "9.0.0",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "5.0.0",
+          "Microsoft.CodeAnalysis.VisualBasic.Workspaces": "5.0.0",
+          "System.Composition": "9.0.0"
         }
       },
       "Microsoft.CodeAnalysis.Common/5.0.0": {
@@ -195,6 +270,60 @@
           }
         }
       },
+      "Microsoft.CodeAnalysis.CSharp.Scripting/5.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp": "5.0.0",
+          "Microsoft.CodeAnalysis.Common": "5.0.0",
+          "Microsoft.CodeAnalysis.Scripting.Common": "5.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.25.56712"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/5.0.0": {
         "dependencies": {
           "Humanizer.Core": "2.14.1",
@@ -247,6 +376,171 @@
             "locale": "zh-Hans"
           },
           "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.Scripting/5.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.CSharp.Scripting": "5.0.0"
+        }
+      },
+      "Microsoft.CodeAnalysis.Scripting.Common/5.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "5.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.25.56712"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.VisualBasic/5.0.0": {
+        "dependencies": {
+          "Microsoft.CodeAnalysis.Common": "5.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.CodeAnalysis.VisualBasic.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.25.56712"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.CodeAnalysis.VisualBasic.Workspaces/5.0.0": {
+        "dependencies": {
+          "Humanizer.Core": "2.14.1",
+          "Microsoft.CodeAnalysis.Common": "5.0.0",
+          "Microsoft.CodeAnalysis.VisualBasic": "5.0.0",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "5.0.0",
+          "System.Composition": "9.0.0"
+        },
+        "runtime": {
+          "lib/net9.0/Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.25.56712"
+          }
+        },
+        "resources": {
+          "lib/net9.0/cs/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net9.0/de/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net9.0/es/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net9.0/fr/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net9.0/it/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net9.0/ja/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net9.0/ko/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net9.0/pl/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net9.0/pt-BR/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net9.0/ru/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net9.0/tr/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net9.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net9.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll": {
             "locale": "zh-Hant"
           }
         }
@@ -637,6 +931,14 @@
           }
         }
       },
+      "NewId/4.0.1": {
+        "runtime": {
+          "lib/net6.0/NewId.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.0.1.0"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "runtime": {
           "lib/net6.0/Newtonsoft.Json.dll": {
@@ -774,17 +1076,17 @@
           }
         }
       },
-      "Polly.Core/8.4.2": {
+      "Polly.Core/8.6.5": {
         "runtime": {
           "lib/net8.0/Polly.Core.dll": {
             "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.4.2.3950"
+            "fileVersion": "8.6.5.5194"
           }
         }
       },
       "Polly.Extensions/8.4.2": {
         "dependencies": {
-          "Polly.Core": "8.4.2"
+          "Polly.Core": "8.6.5"
         },
         "runtime": {
           "lib/net8.0/Polly.Extensions.dll": {
@@ -795,12 +1097,39 @@
       },
       "Polly.RateLimiting/8.4.2": {
         "dependencies": {
-          "Polly.Core": "8.4.2"
+          "Polly.Core": "8.6.5"
         },
         "runtime": {
           "lib/net8.0/Polly.RateLimiting.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.4.2.3950"
+          }
+        }
+      },
+      "RabbitMQ.Client/7.1.2": {
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.1.2.0"
+          }
+        }
+      },
+      "Spectre.Console/0.55.0": {
+        "dependencies": {
+          "Spectre.Console.Ansi": "0.55.0"
+        },
+        "runtime": {
+          "lib/net10.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.55.0.0"
+          }
+        }
+      },
+      "Spectre.Console.Ansi/0.55.0": {
+        "runtime": {
+          "lib/net10.0/Spectre.Console.Ansi.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.55.0.0"
           }
         }
       },
@@ -884,6 +1213,64 @@
           }
         }
       },
+      "WolverineFx/6.14.0": {
+        "dependencies": {
+          "JasperFx": "2.13.0",
+          "JasperFx.Events": "2.13.0",
+          "NewId": "4.0.1"
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.dll": {
+            "assemblyVersion": "6.14.0.0",
+            "fileVersion": "6.14.0.0"
+          }
+        }
+      },
+      "WolverineFx.Newtonsoft/6.14.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "WolverineFx": "6.14.0"
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.Newtonsoft.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "WolverineFx.RabbitMQ/6.14.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "7.1.2",
+          "WolverineFx": "6.14.0",
+          "WolverineFx.Newtonsoft": "6.14.0"
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.RabbitMQ.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "WolverineFx.RuntimeCompilation/6.14.0": {
+        "dependencies": {
+          "JasperFx.RuntimeCompiler": "5.0.0",
+          "WolverineFx": "6.14.0"
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.RuntimeCompilation.dll": {
+            "assemblyVersion": "6.14.0.0",
+            "fileVersion": "6.14.0.0"
+          }
+        }
+      },
+      "Contracts/1.0.0": {
+        "runtime": {
+          "Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Overflow.ServiceDefaults/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Http.Resilience": "10.6.0",
@@ -909,19 +1296,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Aspire.Keycloak.Authentication/13.4.5-preview.1.26316.12": {
+    "Aspire.Keycloak.Authentication/13.4.6-preview.1.26319.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aHQNzCKU8H9R2ybGzpQqM5mH8bkQbrc5rxUwL00LKmQGz+ZPXZ7ZzcjHS1cOaoHGniK4ly5nu7dl/x6z+lwJkQ==",
-      "path": "aspire.keycloak.authentication/13.4.5-preview.1.26316.12",
-      "hashPath": "aspire.keycloak.authentication.13.4.5-preview.1.26316.12.nupkg.sha512"
+      "sha512": "sha512-QmsVECNqys1glUvRK/zpZ4LvrZ2p1r6NUwgwlFg7eYRBCXnpicd69q6y9/fog4eqkFrWnCeMcuLrEo82HGc2lQ==",
+      "path": "aspire.keycloak.authentication/13.4.6-preview.1.26319.6",
+      "hashPath": "aspire.keycloak.authentication.13.4.6-preview.1.26319.6.nupkg.sha512"
     },
-    "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.4.5": {
+    "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.4.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ee0tbZ8Ob+2aH01t29zvVlpXAiw6ZAla3xUt5vRIkHUi1Eeijjmli5W4U3Ty6gfA0mOY9K+fULzlOQ0pI4qyXw==",
-      "path": "aspire.npgsql.entityframeworkcore.postgresql/13.4.5",
-      "hashPath": "aspire.npgsql.entityframeworkcore.postgresql.13.4.5.nupkg.sha512"
+      "sha512": "sha512-Lt92FuyX4JkKwrAgrOsVARpmk3U9vBGBq784ZEO3hR2vC74o8VS/VWBJHYrRBYTXapuj+mwwPzvcUICmbB43Zg==",
+      "path": "aspire.npgsql.entityframeworkcore.postgresql/13.4.6",
+      "hashPath": "aspire.npgsql.entityframeworkcore.postgresql.13.4.6.nupkg.sha512"
+    },
+    "FastExpressionCompiler/5.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nqMykMspK5cQd35Y8ulQzAujxCcCwZVUne32pC5xNpXqrbPCuKOPMWkKHJ3LveAZPm6dsVvump0TJ1SZ9RzfTQ==",
+      "path": "fastexpressioncompiler/5.4.1",
+      "hashPath": "fastexpressioncompiler.5.4.1.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",
@@ -929,6 +1323,27 @@
       "sha512": "sha512-lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
+    },
+    "JasperFx/2.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uxG0vg1BER3Sq+p26JyIK0H/3lIZgApcYltajYkWzQqIyOeIkXM/EgTOTI1HEYzTfGsYWpuoiyMHcn8ZfJfhOQ==",
+      "path": "jasperfx/2.13.0",
+      "hashPath": "jasperfx.2.13.0.nupkg.sha512"
+    },
+    "JasperFx.Events/2.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xGqaeCRo1Ie2jaOKvnGC1626+5dVnC81jwW+jEtUFDg0zFxUw9Gh899Xwa8ZTm2rnxv0tntHGdMxLTseLK9c/w==",
+      "path": "jasperfx.events/2.13.0",
+      "hashPath": "jasperfx.events.2.13.0.nupkg.sha512"
+    },
+    "JasperFx.RuntimeCompiler/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FKP0HSPN3p8YgJHWaTTqk/wZhLpOrShjrZ9rT3dAuKfj7EvC/NepRxeJ5Nq55tIcLAwR/pLVedxhxL9/kizwFg==",
+      "path": "jasperfx.runtimecompiler/5.0.0",
+      "hashPath": "jasperfx.runtimecompiler.5.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.8": {
       "type": "package",
@@ -951,12 +1366,33 @@
       "path": "microsoft.aspnetcore.openapi/10.0.9",
       "hashPath": "microsoft.aspnetcore.openapi.10.0.9.nupkg.sha512"
     },
+    "Microsoft.Bcl.AsyncInterfaces/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-owmu2Cr3IQ8yQiBleBHlGk8dSQ12oaF2e7TpzwJKEl4m84kkZJjEY1n33L67Y3zM5jPOjmmbdHjbfiL0RqcMRQ==",
+      "path": "microsoft.bcl.asyncinterfaces/9.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.9.0.0.nupkg.sha512"
+    },
+    "Microsoft.Bcl.TimeProvider/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bUubrBD6tRJE3V1kvRloYc6NymH3R5oFKjAS9e0ELNx6u0ZR+zjps9dDQyjgqN/rArzl7f+21KGszj3YRN7F2Q==",
+      "path": "microsoft.bcl.timeprovider/10.0.0",
+      "hashPath": "microsoft.bcl.timeprovider.10.0.0.nupkg.sha512"
+    },
     "Microsoft.Build.Framework/18.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-sOSb+0J4G/jCBW/YqmRuL0eOMXgfw1KQLdC9TkbvfA5xs7uNm+PBQXJCOzSJGXtZcZrtXozcwxPmUiRUbmd7FA==",
       "path": "microsoft.build.framework/18.0.2",
       "hashPath": "microsoft.build.framework.18.0.2.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-X7vItpZDkGm4NS2wp4P1S07Z1e61LaBWDW5tPXE1c6z5/x9KbF2RymhAPoYg7Qoiyk7odEZ6EjBEJ47p3dBpYQ==",
+      "path": "microsoft.codeanalysis/5.0.0",
+      "hashPath": "microsoft.codeanalysis.5.0.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Common/5.0.0": {
       "type": "package",
@@ -972,12 +1408,47 @@
       "path": "microsoft.codeanalysis.csharp/5.0.0",
       "hashPath": "microsoft.codeanalysis.csharp.5.0.0.nupkg.sha512"
     },
+    "Microsoft.CodeAnalysis.CSharp.Scripting/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1sGloRYbG3743ut/+vuXy9/WaRQTm7mDtp71rBaVSmKpFntvo5Hcro1ubg6/3SeeLtiFYJl7V3Dk0Fo3CGlnHA==",
+      "path": "microsoft.codeanalysis.csharp.scripting/5.0.0",
+      "hashPath": "microsoft.codeanalysis.csharp.scripting.5.0.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/5.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Al/Q8B+yO8odSqGVpSvrShMFDvlQdIBU//F3E6Rb0YdiLSALE9wh/pvozPNnfmh5HDnvU+mkmSjpz4hQO++jaA==",
       "path": "microsoft.codeanalysis.csharp.workspaces/5.0.0",
       "hashPath": "microsoft.codeanalysis.csharp.workspaces.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.Scripting/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/KgZdm6kRTrR/O2jqXxU5GWREYhtVmqcNWczyPt8hsQkFGFK/C6CrLWfG44FCUn0aPHGDRBHYjXlGosQ/H8oXw==",
+      "path": "microsoft.codeanalysis.scripting/5.0.0",
+      "hashPath": "microsoft.codeanalysis.scripting.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.Scripting.Common/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XTulByMNxqXGCgMeODUoG2h4oK4/nLv1BcawRVcjv+UZHMpoaymtdaq3cJqlNrEvYEcbU48g5swJ3RhY1m3fBg==",
+      "path": "microsoft.codeanalysis.scripting.common/5.0.0",
+      "hashPath": "microsoft.codeanalysis.scripting.common.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.VisualBasic/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sUBWvHs2HgHGA+b716dgjS7JiXGen5ntyohAurPLR1ZiZzFp3FlnVA7GrMTqVGdVJTVqiC3c4K8k1bk0gj6IPg==",
+      "path": "microsoft.codeanalysis.visualbasic/5.0.0",
+      "hashPath": "microsoft.codeanalysis.visualbasic.5.0.0.nupkg.sha512"
+    },
+    "Microsoft.CodeAnalysis.VisualBasic.Workspaces/5.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nom4UuZVEZGaV6Qa+joJR/BawXZMtflvQJFKc0SaUc3LrZr/8LmRY5cn8mbvLOWIVfwWkQz+cVE6eQKu9qa65g==",
+      "path": "microsoft.codeanalysis.visualbasic.workspaces/5.0.0",
+      "hashPath": "microsoft.codeanalysis.visualbasic.workspaces.5.0.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Workspaces.Common/5.0.0": {
       "type": "package",
@@ -1175,6 +1646,13 @@
       "path": "mono.texttemplating/3.0.0",
       "hashPath": "mono.texttemplating.3.0.0.nupkg.sha512"
     },
+    "NewId/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jegBasNndmG21G3BmT51suFDCIz/sLN81j+IxmkZ4iWoaDi8LygeHiyNnYbXz5OQh9nCRJFIx1+PJrlYi1Gc9Q==",
+      "path": "newid/4.0.1",
+      "hashPath": "newid.4.0.1.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.3": {
       "type": "package",
       "serviceable": true,
@@ -1266,12 +1744,12 @@
       "path": "opentelemetry.instrumentation.runtime/1.15.1",
       "hashPath": "opentelemetry.instrumentation.runtime.1.15.1.nupkg.sha512"
     },
-    "Polly.Core/8.4.2": {
+    "Polly.Core/8.6.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BpE2I6HBYYA5tF0Vn4eoQOGYTYIK1BlF5EXVgkWGn3mqUUjbXAr13J6fZVbp7Q3epRR8yshacBMlsHMhpOiV3g==",
-      "path": "polly.core/8.4.2",
-      "hashPath": "polly.core.8.4.2.nupkg.sha512"
+      "sha512": "sha512-t+sUVrIwvo7UmsgHGgOG9F0GDZSRIm47u2ylH17Gvcv1q5hNEwgD5GoBlFyc0kh/pebmPyrAgvGsR/65ZBaXlg==",
+      "path": "polly.core/8.6.5",
+      "hashPath": "polly.core.8.6.5.nupkg.sha512"
     },
     "Polly.Extensions/8.4.2": {
       "type": "package",
@@ -1286,6 +1764,27 @@
       "sha512": "sha512-ehTImQ/eUyO07VYW2WvwSmU9rRH200SKJ/3jku9rOkyWE0A2JxNFmAVms8dSn49QLSjmjFRRSgfNyOgr/2PSmA==",
       "path": "polly.ratelimiting/8.4.2",
       "hashPath": "polly.ratelimiting.8.4.2.nupkg.sha512"
+    },
+    "RabbitMQ.Client/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y3c6ulgULScWthHw5PLM1ShHRLhxg0vCtzX/hh61gRgNecL3ZC3WoBW2HYHoXOVRqTl99Br9E7CZEytGZEsCyQ==",
+      "path": "rabbitmq.client/7.1.2",
+      "hashPath": "rabbitmq.client.7.1.2.nupkg.sha512"
+    },
+    "Spectre.Console/0.55.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2TVhUHFsDux0Z+y2Hv4bFsOMuON4SuotEEKkMparFkp5Rm259naaaEQrN4Sv6C1cbsiGKPjfkJDGgUp+hZPjTw==",
+      "path": "spectre.console/0.55.0",
+      "hashPath": "spectre.console.0.55.0.nupkg.sha512"
+    },
+    "Spectre.Console.Ansi/0.55.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GIfgOvuF8MpU52bprhwtDEtx0gmVIGOepM8bw0lH/TSMD0rg1Xp+5Y53kPG8rFVdcpbNANlhDQ5mEVVPO3/2Tg==",
+      "path": "spectre.console.ansi/0.55.0",
+      "hashPath": "spectre.console.ansi.0.55.0.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",
@@ -1342,6 +1841,39 @@
       "sha512": "sha512-GJw3bYkWpOgvN3tJo5X4lYUeIFA2HD293FPUhKmp7qxS+g5ywAb34Dnd3cDAFLkcMohy5XTpoaZ4uAHuw0uSPQ==",
       "path": "system.identitymodel.tokens.jwt/8.0.1",
       "hashPath": "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
+    },
+    "WolverineFx/6.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2AqBUVfjBDDQ6d8nwVDj/rQ5Ife/m8mcsWbuyqBL9ov6HCZ9pZaEKTbmwiO7IpsW16xPR6wqW4ugO2lvS0fSWQ==",
+      "path": "wolverinefx/6.14.0",
+      "hashPath": "wolverinefx.6.14.0.nupkg.sha512"
+    },
+    "WolverineFx.Newtonsoft/6.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZRjoh923j6M4Xf59H4HMWuDtk+a1GbDvNMOZEnUB6BOtmZQJL+gn6lIQL8AtjQU9of8pQi4uCiUfNxQdcbc/2w==",
+      "path": "wolverinefx.newtonsoft/6.14.0",
+      "hashPath": "wolverinefx.newtonsoft.6.14.0.nupkg.sha512"
+    },
+    "WolverineFx.RabbitMQ/6.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZOJ7n9NcqoNA+b9EzvSfkElWBnIePobYdc+RfC4vdJU1RK8hiABeiFmTfNodHau2YnuWoXjF32/G7qNw9RowCw==",
+      "path": "wolverinefx.rabbitmq/6.14.0",
+      "hashPath": "wolverinefx.rabbitmq.6.14.0.nupkg.sha512"
+    },
+    "WolverineFx.RuntimeCompilation/6.14.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SVMGIoBAm6pjiYaAmYmPeTcQNZkeUbWa8UsunoG6SiwgX1z7imuR8Hu7jezrsGuZZwjn3qwKRvHgh0cOuLqWWQ==",
+      "path": "wolverinefx.runtimecompilation/6.14.0",
+      "hashPath": "wolverinefx.runtimecompilation.6.14.0.nupkg.sha512"
+    },
+    "Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Overflow.ServiceDefaults/1.0.0": {
       "type": "project",

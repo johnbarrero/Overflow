@@ -11,19 +11,19 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("32570234-c4d3-4900-885b-8cbd7adb60cd")]
-[assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.4\\tools\\" +
+[assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.6\\tools\\" +
     "dcp.exe"))]
-[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.4\\tools\\" +
+[assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.6\\tools\\" +
     "ext\\"))]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "Overflow.AppHost.csproj")]
-[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\13.4.4\\tools\\Aspire.D" +
+[assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("C:\\Users\\johnb\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\13.4.6\\tools\\Aspire.D" +
     "ashboard.exe"))]
 [assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3ee80e063db02caa817e4443c18394c761f793d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+906bafad327d356c6912cb429ceadcd1a9a49099")]
 [assembly: System.Reflection.AssemblyProductAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Overflow.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
