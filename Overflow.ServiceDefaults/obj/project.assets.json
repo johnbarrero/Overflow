@@ -972,6 +972,7 @@
       "outputPath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.ServiceDefaults\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
+        "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\NuGet.Config",
         "C:\\Users\\johnb\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [

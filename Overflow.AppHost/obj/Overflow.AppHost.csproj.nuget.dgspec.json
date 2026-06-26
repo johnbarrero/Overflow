@@ -14,6 +14,7 @@
         "outputPath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.AppHost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+          "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\NuGet.Config",
           "C:\\Users\\johnb\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
@@ -46,26 +47,30 @@
           "dependencies": {
             "Aspire.Dashboard.Sdk.win-x64": {
               "target": "Package",
-              "version": "[13.4.4, )",
+              "version": "[13.4.6, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.AppHost": {
               "target": "Package",
-              "version": "[13.4.4, )",
+              "version": "[13.4.6, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.Keycloak": {
               "target": "Package",
-              "version": "[13.4.4-preview.1.26314.3, )"
+              "version": "[13.4.6-preview.1.26319.6, )"
             },
             "Aspire.Hosting.Orchestration.win-x64": {
               "target": "Package",
-              "version": "[13.4.4, )",
+              "version": "[13.4.6, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.PostgreSQL": {
               "target": "Package",
-              "version": "[13.4.5, )"
+              "version": "[13.4.6, )"
+            },
+            "Aspire.Hosting.RabbitMQ": {
+              "target": "Package",
+              "version": "[13.4.6, )"
             }
           },
           "imports": [

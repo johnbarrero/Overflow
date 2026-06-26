@@ -8,15 +8,16 @@
     ".NETCoreApp,Version=v10.0": {
       "Overflow.AppHost/1.0.0": {
         "dependencies": {
-          "Aspire.Hosting.AppHost": "13.4.4",
-          "Aspire.Hosting.Keycloak": "13.4.4-preview.1.26314.3",
-          "Aspire.Hosting.PostgreSQL": "13.4.5"
+          "Aspire.Hosting.AppHost": "13.4.6",
+          "Aspire.Hosting.Keycloak": "13.4.6-preview.1.26319.6",
+          "Aspire.Hosting.PostgreSQL": "13.4.6",
+          "Aspire.Hosting.RabbitMQ": "13.4.6"
         },
         "runtime": {
           "Overflow.AppHost.dll": {}
         }
       },
-      "Aspire.Hosting/13.4.5": {
+      "Aspire.Hosting/13.4.6": {
         "dependencies": {
           "AspNetCore.HealthChecks.Uris": "9.0.0",
           "Google.Protobuf": "3.34.1",
@@ -36,8 +37,8 @@
         },
         "runtime": {
           "lib/net8.0/Aspire.Hosting.dll": {
-            "assemblyVersion": "13.4.5.0",
-            "fileVersion": "13.400.526.31612"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
           }
         },
         "resources": {
@@ -82,10 +83,10 @@
           }
         }
       },
-      "Aspire.Hosting.AppHost/13.4.4": {
+      "Aspire.Hosting.AppHost/13.4.6": {
         "dependencies": {
           "AspNetCore.HealthChecks.Uris": "9.0.0",
-          "Aspire.Hosting": "13.4.5",
+          "Aspire.Hosting": "13.4.6",
           "Google.Protobuf": "3.34.1",
           "Grpc.AspNetCore": "2.80.0",
           "Grpc.Net.ClientFactory": "2.80.0",
@@ -103,15 +104,15 @@
         },
         "runtime": {
           "lib/net10.0/Aspire.Hosting.AppHost.dll": {
-            "assemblyVersion": "13.4.4.0",
-            "fileVersion": "13.400.426.31403"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
           }
         }
       },
-      "Aspire.Hosting.Keycloak/13.4.4-preview.1.26314.3": {
+      "Aspire.Hosting.Keycloak/13.4.6-preview.1.26319.6": {
         "dependencies": {
           "AspNetCore.HealthChecks.Uris": "9.0.0",
-          "Aspire.Hosting": "13.4.5",
+          "Aspire.Hosting": "13.4.6",
           "Google.Protobuf": "3.34.1",
           "Grpc.AspNetCore": "2.80.0",
           "Grpc.Net.ClientFactory": "2.80.0",
@@ -129,16 +130,16 @@
         },
         "runtime": {
           "lib/net8.0/Aspire.Hosting.Keycloak.dll": {
-            "assemblyVersion": "13.4.4.0",
-            "fileVersion": "13.400.426.31403"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
           }
         }
       },
-      "Aspire.Hosting.PostgreSQL/13.4.5": {
+      "Aspire.Hosting.PostgreSQL/13.4.6": {
         "dependencies": {
           "AspNetCore.HealthChecks.NpgSql": "9.0.0",
           "AspNetCore.HealthChecks.Uris": "9.0.0",
-          "Aspire.Hosting": "13.4.5",
+          "Aspire.Hosting": "13.4.6",
           "Google.Protobuf": "3.34.1",
           "Grpc.AspNetCore": "2.80.0",
           "Grpc.Net.ClientFactory": "2.80.0",
@@ -156,8 +157,36 @@
         },
         "runtime": {
           "lib/net8.0/Aspire.Hosting.PostgreSQL.dll": {
-            "assemblyVersion": "13.4.5.0",
-            "fileVersion": "13.400.526.31612"
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
+          }
+        }
+      },
+      "Aspire.Hosting.RabbitMQ/13.4.6": {
+        "dependencies": {
+          "AspNetCore.HealthChecks.Rabbitmq": "9.0.0",
+          "AspNetCore.HealthChecks.Uris": "9.0.0",
+          "Aspire.Hosting": "13.4.6",
+          "Google.Protobuf": "3.34.1",
+          "Grpc.AspNetCore": "2.80.0",
+          "Grpc.Net.ClientFactory": "2.80.0",
+          "Humanizer.Core": "3.0.10",
+          "JsonPatch.Net": "3.3.0",
+          "KubernetesClient": "19.0.2",
+          "ModelContextProtocol": "1.3.0",
+          "Newtonsoft.Json": "13.0.4",
+          "OpenTelemetry.Exporter.OpenTelemetryProtocol": "1.15.3",
+          "OpenTelemetry.Extensions.Hosting": "1.15.3",
+          "Polly.Core": "8.6.6",
+          "RabbitMQ.Client": "7.2.1",
+          "Semver": "3.0.0",
+          "StreamJsonRpc": "2.25.29",
+          "System.IO.Hashing": "10.0.8"
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.RabbitMQ.dll": {
+            "assemblyVersion": "13.4.6.0",
+            "fileVersion": "13.400.626.31906"
           }
         }
       },
@@ -167,6 +196,17 @@
         },
         "runtime": {
           "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.Rabbitmq/9.0.0": {
+        "dependencies": {
+          "RabbitMQ.Client": "7.2.1"
+        },
+        "runtime": {
+          "lib/net8.0/HealthChecks.Rabbitmq.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.0.0"
           }
@@ -585,6 +625,14 @@
           }
         }
       },
+      "RabbitMQ.Client/7.2.1": {
+        "runtime": {
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.1.0"
+          }
+        }
+      },
       "Semver/3.0.0": {
         "runtime": {
           "lib/net5.0/Semver.dll": {
@@ -674,33 +722,40 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Aspire.Hosting/13.4.5": {
+    "Aspire.Hosting/13.4.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-goX7ggX+sRFjKs6NnjHzq0vrFFzpOh+D4yNP5O3MG6FYM5gOn45unaM0GB/5YHwZAMkhPkV03rHBP+QeVxNpjQ==",
-      "path": "aspire.hosting/13.4.5",
-      "hashPath": "aspire.hosting.13.4.5.nupkg.sha512"
+      "sha512": "sha512-YJEvsrgcVLPQ88aJ3aFMIEJue0ZFmyH8RfyQu0PnHdZzjBAiK0c8BaYUAycWu35QpTe4hHxEYaY0wW4gpy/kwg==",
+      "path": "aspire.hosting/13.4.6",
+      "hashPath": "aspire.hosting.13.4.6.nupkg.sha512"
     },
-    "Aspire.Hosting.AppHost/13.4.4": {
+    "Aspire.Hosting.AppHost/13.4.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-cUSc3s0iZ8FTtgJpiBmugSchcQA2qdIQwa/b7GpxbDfBr2no3OANa3pi+FSgqNE3rOkc0IFe9X6cRGaXcDRaLQ==",
-      "path": "aspire.hosting.apphost/13.4.4",
-      "hashPath": "aspire.hosting.apphost.13.4.4.nupkg.sha512"
+      "sha512": "sha512-+4BxGpb2JQDk3+uOmk5eDpK0Brg2d3hwqrK/7d/aDBAUoHYbjfwbItIfdYJjKjbxUkBiaotokcWdVbLNsMo9Nw==",
+      "path": "aspire.hosting.apphost/13.4.6",
+      "hashPath": "aspire.hosting.apphost.13.4.6.nupkg.sha512"
     },
-    "Aspire.Hosting.Keycloak/13.4.4-preview.1.26314.3": {
+    "Aspire.Hosting.Keycloak/13.4.6-preview.1.26319.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-YSULhfGK8krY+kmiGXcoJhUQDZ0hZSCExjWjQbBXt2++jn94IkFzyEokGtApjizzwTt8XfCxxRVw8/DQLEtAZw==",
-      "path": "aspire.hosting.keycloak/13.4.4-preview.1.26314.3",
-      "hashPath": "aspire.hosting.keycloak.13.4.4-preview.1.26314.3.nupkg.sha512"
+      "sha512": "sha512-KAtJVQGyTqgtcYGNfFgBEBbMfYiPUmhIQVg1VbK+WLICZ0YUeRSk3PvyKjvHzl96hwPITsXJL+vZK2RBPOoo+g==",
+      "path": "aspire.hosting.keycloak/13.4.6-preview.1.26319.6",
+      "hashPath": "aspire.hosting.keycloak.13.4.6-preview.1.26319.6.nupkg.sha512"
     },
-    "Aspire.Hosting.PostgreSQL/13.4.5": {
+    "Aspire.Hosting.PostgreSQL/13.4.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RfFsgwzvpb2oM0WzJDloWm2jvn4Z999kT9AMJafdSV6T9K2k4IfHfH5JF8gF7U7XuZGWGJhg/2UVPXHoQwNPZQ==",
-      "path": "aspire.hosting.postgresql/13.4.5",
-      "hashPath": "aspire.hosting.postgresql.13.4.5.nupkg.sha512"
+      "sha512": "sha512-NyL7O7e7DcpZSF0sAz332GIJ3S7X/66NoqhPqzVMPbNYfF97bTrk7C7Yq1tuilffHfq2SV2xi6aHbhGOmSoGqw==",
+      "path": "aspire.hosting.postgresql/13.4.6",
+      "hashPath": "aspire.hosting.postgresql.13.4.6.nupkg.sha512"
+    },
+    "Aspire.Hosting.RabbitMQ/13.4.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AZLjFJFGucS4JquL7xHJuTc/Oh4jLcJzfmxeUplNk0jwXgd+ZUrdpd0YwvC7uRkdfLb6hSLFzU1n3UZqUEnATQ==",
+      "path": "aspire.hosting.rabbitmq/13.4.6",
+      "hashPath": "aspire.hosting.rabbitmq.13.4.6.nupkg.sha512"
     },
     "AspNetCore.HealthChecks.NpgSql/9.0.0": {
       "type": "package",
@@ -708,6 +763,13 @@
       "sha512": "sha512-npc58/AD5zuVxERdhCl2Kb7WnL37mwX42SJcXIwvmEig0/dugOLg3SIwtfvvh3TnvTwR/sk5LYNkkPaBdks61A==",
       "path": "aspnetcore.healthchecks.npgsql/9.0.0",
       "hashPath": "aspnetcore.healthchecks.npgsql.9.0.0.nupkg.sha512"
+    },
+    "AspNetCore.HealthChecks.Rabbitmq/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7WSQ7EwioA5niakzzLtGVcZMEOh+42fSwrI24vnNsT7gZuVGOViNekyz38G6wBPYKcpL/lUkMdg3ZaCiZTi/Dw==",
+      "path": "aspnetcore.healthchecks.rabbitmq/9.0.0",
+      "hashPath": "aspnetcore.healthchecks.rabbitmq.9.0.0.nupkg.sha512"
     },
     "AspNetCore.HealthChecks.Uris/9.0.0": {
       "type": "package",
@@ -946,6 +1008,13 @@
       "sha512": "sha512-GFdJvsN/VczpP0GfdPIi0jDudGH2Emk3rcIJHdqwU2SL2zQm1xSl6OTYvQSUxvzHu3ClWo096ICdWXVkpifQUA==",
       "path": "polytype/1.3.1",
       "hashPath": "polytype.1.3.1.nupkg.sha512"
+    },
+    "RabbitMQ.Client/7.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YKXEfg9fVQiTKgZlvIhAfPSFaamEgi8DsQmisCH0IAsU4FYLrtoguDrDj6JtJVGUt40QPnBLRH6fTQcAC4qsOg==",
+      "path": "rabbitmq.client/7.2.1",
+      "hashPath": "rabbitmq.client.7.2.1.nupkg.sha512"
     },
     "Semver/3.0.0": {
       "type": "package",
