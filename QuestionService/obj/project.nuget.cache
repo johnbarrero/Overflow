@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fGRpF4h0LlQ=",
+  "dgSpecHash": "QIX7F+dQTko=",
   "success": true,
   "projectFilePath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\QuestionService\\QuestionService.csproj",
   "expectedPackageFiles": [
@@ -71,7 +71,8 @@
     "C:\\Users\\johnb\\.nuget\\packages\\opentelemetry.instrumentation.aspnetcore\\1.15.2\\opentelemetry.instrumentation.aspnetcore.1.15.2.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\opentelemetry.instrumentation.http\\1.15.1\\opentelemetry.instrumentation.http.1.15.1.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\opentelemetry.instrumentation.runtime\\1.15.1\\opentelemetry.instrumentation.runtime.1.15.1.nupkg.sha512",
-    "C:\\Users\\johnb\\.nuget\\packages\\polly.core\\8.6.5\\polly.core.8.6.5.nupkg.sha512",
+    "C:\\Users\\johnb\\.nuget\\packages\\polly\\8.7.0\\polly.8.7.0.nupkg.sha512",
+    "C:\\Users\\johnb\\.nuget\\packages\\polly.core\\8.7.0\\polly.core.8.7.0.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\polly.extensions\\8.4.2\\polly.extensions.8.4.2.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\rabbitmq.client\\7.1.2\\rabbitmq.client.7.1.2.nupkg.sha512",
@@ -85,7 +86,8 @@
     "C:\\Users\\johnb\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.0.1\\system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\wolverinefx\\5.16.4\\wolverinefx.5.16.4.nupkg.sha512",
-    "C:\\Users\\johnb\\.nuget\\packages\\wolverinefx.rabbitmq\\5.16.4\\wolverinefx.rabbitmq.5.16.4.nupkg.sha512"
+    "C:\\Users\\johnb\\.nuget\\packages\\wolverinefx.rabbitmq\\5.16.4\\wolverinefx.rabbitmq.5.16.4.nupkg.sha512",
+    "C:\\Users\\johnb\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\10.0.9\\microsoft.netcore.app.host.linux-x64.10.0.9.nupkg.sha512"
   ],
   "logs": []
 }

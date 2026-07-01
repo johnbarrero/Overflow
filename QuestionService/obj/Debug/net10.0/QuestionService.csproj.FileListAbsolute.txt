@@ -228,3 +228,6 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debu
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Contracts.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Contracts.pdb
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Polly.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Common.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Common.pdb

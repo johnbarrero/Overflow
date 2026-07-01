@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Overflow.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb3cf4130671fa0fa6013085ab2460a45de241b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1688b9d3579563b27852be42b443de15d6ec558b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Overflow.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Overflow.ServiceDefaults")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
