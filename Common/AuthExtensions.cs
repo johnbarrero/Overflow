@@ -5,7 +5,7 @@ namespace Common;
 
 public static class AuthExtensions
 {
-    public static IServiceCollection AddKeyCloakAuthentication(this IServiceCollection services)
+    public static IServiceCollection AddKeyCloakAuthentication(this IServiceCollection services)    
     {
         services.AddAuthentication()
             .AddKeycloakJwtBearer(serviceName: "keycloak", "overflow", options =>
