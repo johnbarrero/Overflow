@@ -42,7 +42,7 @@
           "buildTransitive/net10.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets": {}
         }
       },
-      "FastExpressionCompiler/5.3.0": {
+      "FastExpressionCompiler/5.4.1": {
         "type": "package",
         "compile": {
           "lib/net9.0/FastExpressionCompiler.dll": {
@@ -78,14 +78,14 @@
           }
         }
       },
-      "JasperFx/1.20.0": {
+      "JasperFx/2.13.0": {
         "type": "package",
         "dependencies": {
-          "FastExpressionCompiler": "5.3.0",
+          "FastExpressionCompiler": "5.4.1",
           "ImTools": "4.0.0",
           "Microsoft.Bcl.TimeProvider": "10.0.0",
           "Polly.Core": "8.6.5",
-          "Spectre.Console": "0.53.0"
+          "Spectre.Console": "0.55.0"
         },
         "compile": {
           "lib/net10.0/JasperFx.dll": {
@@ -98,10 +98,10 @@
           }
         }
       },
-      "JasperFx.Events/1.22.0": {
+      "JasperFx.Events/2.13.0": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.20.0"
+          "JasperFx": "2.13.0"
         },
         "compile": {
           "lib/net10.0/JasperFx.Events.dll": {
@@ -114,10 +114,10 @@
           }
         }
       },
-      "JasperFx.RuntimeCompiler/4.4.0": {
+      "JasperFx.RuntimeCompiler/5.0.0": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.18.0",
+          "JasperFx": "2.0.0",
           "Microsoft.CodeAnalysis": "5.0.0",
           "Microsoft.CodeAnalysis.CSharp": "5.0.0",
           "Microsoft.CodeAnalysis.Scripting": "5.0.0"
@@ -132,6 +132,9 @@
             "related": ".xml"
           }
         }
+      },
+      "JasperFx.SourceGenerator/2.13.0": {
+        "type": "package"
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.8": {
         "type": "package",
@@ -1463,23 +1466,7 @@
           }
         }
       },
-      "Polly/8.7.0": {
-        "type": "package",
-        "dependencies": {
-          "Polly.Core": "8.7.0"
-        },
-        "compile": {
-          "lib/net6.0/Polly.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Polly.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Polly.Core/8.7.0": {
+      "Polly.Core/8.6.5": {
         "type": "package",
         "compile": {
           "lib/net8.0/Polly.Core.dll": {
@@ -1537,15 +1524,31 @@
           }
         }
       },
-      "Spectre.Console/0.53.0": {
+      "Spectre.Console/0.55.0": {
         "type": "package",
+        "dependencies": {
+          "Spectre.Console.Ansi": "0.55.0"
+        },
         "compile": {
-          "lib/net9.0/Spectre.Console.dll": {
+          "lib/net10.0/Spectre.Console.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net9.0/Spectre.Console.dll": {
+          "lib/net10.0/Spectre.Console.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Spectre.Console.Ansi/0.55.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Spectre.Console.Ansi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Spectre.Console.Ansi.dll": {
             "related": ".xml"
           }
         }
@@ -1693,14 +1696,13 @@
           }
         }
       },
-      "WolverineFx/5.16.4": {
+      "WolverineFx/6.14.0": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.20.0",
-          "JasperFx.Events": "1.22.0",
-          "JasperFx.RuntimeCompiler": "4.4.0",
-          "NewId": "4.0.1",
-          "Newtonsoft.Json": "13.0.3"
+          "JasperFx": "2.13.0",
+          "JasperFx.Events": "2.13.0",
+          "JasperFx.SourceGenerator": "2.13.0",
+          "NewId": "4.0.1"
         },
         "compile": {
           "lib/net10.0/Wolverine.dll": {
@@ -1713,11 +1715,29 @@
           }
         }
       },
-      "WolverineFx.RabbitMQ/5.16.4": {
+      "WolverineFx.Newtonsoft/6.14.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "WolverineFx": "6.14.0"
+        },
+        "compile": {
+          "lib/net10.0/Wolverine.Newtonsoft.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.Newtonsoft.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "WolverineFx.RabbitMQ/6.14.0": {
         "type": "package",
         "dependencies": {
           "RabbitMQ.Client": "7.1.2",
-          "WolverineFx": "5.16.4"
+          "WolverineFx": "6.14.0",
+          "WolverineFx.Newtonsoft": "6.14.0"
         },
         "compile": {
           "lib/net10.0/Wolverine.RabbitMQ.dll": {
@@ -1730,20 +1750,21 @@
           }
         }
       },
-      "Common/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v10.0",
+      "WolverineFx.RuntimeCompilation/6.14.0": {
+        "type": "package",
         "dependencies": {
-          "Aspire.Keycloak.Authentication": "13.4.6-preview.1.26319.6",
-          "Overflow.ServiceDefaults": "1.0.0",
-          "Polly": "8.7.0",
-          "WolverineFx.RabbitMQ": "5.16.4"
+          "JasperFx.RuntimeCompiler": "5.0.0",
+          "WolverineFx": "6.14.0"
         },
         "compile": {
-          "bin/placeholder/Common.dll": {}
+          "lib/net10.0/Wolverine.RuntimeCompilation.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "bin/placeholder/Common.dll": {}
+          "lib/net10.0/Wolverine.RuntimeCompilation.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Contracts/1.0.0": {
@@ -1825,16 +1846,16 @@
         "lib/net9.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.xml"
       ]
     },
-    "FastExpressionCompiler/5.3.0": {
-      "sha512": "XRmGW48Gdm7B70WUtTJJUnmuc8jRDmOhhjG/a3rix/nXChnrkETaSvA0j2VrcsH4MNeYLe60LA5o5JABmbneag==",
+    "FastExpressionCompiler/5.4.1": {
+      "sha512": "nqMykMspK5cQd35Y8ulQzAujxCcCwZVUne32pC5xNpXqrbPCuKOPMWkKHJ3LveAZPm6dsVvump0TJ1SZ9RzfTQ==",
       "type": "package",
-      "path": "fastexpressioncompiler/5.3.0",
+      "path": "fastexpressioncompiler/5.4.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "FastExpressionCompiler.snk",
         "LICENSE/LICENSE",
-        "fastexpressioncompiler.5.3.0.nupkg.sha512",
+        "fastexpressioncompiler.5.4.1.nupkg.sha512",
         "fastexpressioncompiler.nuspec",
         "lib/net472/FastExpressionCompiler.dll",
         "lib/net472/FastExpressionCompiler.xml",
@@ -1886,55 +1907,69 @@
         "imtools.nuspec"
       ]
     },
-    "JasperFx/1.20.0": {
-      "sha512": "ymb6lJnPITfnnw2IO2Ddtu4weXDcA5L80rXYKhF7H8IIsFCiTPQ1DAeGtNvsF22N3JBKNyKjAtg+fuTxgRMj3g==",
+    "JasperFx/2.13.0": {
+      "sha512": "uxG0vg1BER3Sq+p26JyIK0H/3lIZgApcYltajYkWzQqIyOeIkXM/EgTOTI1HEYzTfGsYWpuoiyMHcn8ZfJfhOQ==",
       "type": "package",
-      "path": "jasperfx/1.20.0",
+      "path": "jasperfx/2.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.1.20.0.nupkg.sha512",
+        "README.md",
+        "jasperfx.2.13.0.nupkg.sha512",
         "jasperfx.nuspec",
         "lib/net10.0/JasperFx.dll",
         "lib/net10.0/JasperFx.xml",
-        "lib/net8.0/JasperFx.dll",
-        "lib/net8.0/JasperFx.xml",
         "lib/net9.0/JasperFx.dll",
-        "lib/net9.0/JasperFx.xml"
+        "lib/net9.0/JasperFx.xml",
+        "logo.jpg"
       ]
     },
-    "JasperFx.Events/1.22.0": {
-      "sha512": "QD01W8GFqHcMLYpqF4G5adkEHFexCntWSIWejvccVxmw8TTMmGf+EH8EoQI8EitdCc0XZ/ocGog2TQTRkqxG4A==",
+    "JasperFx.Events/2.13.0": {
+      "sha512": "xGqaeCRo1Ie2jaOKvnGC1626+5dVnC81jwW+jEtUFDg0zFxUw9Gh899Xwa8ZTm2rnxv0tntHGdMxLTseLK9c/w==",
       "type": "package",
-      "path": "jasperfx.events/1.22.0",
+      "path": "jasperfx.events/2.13.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.events.1.22.0.nupkg.sha512",
+        "README.md",
+        "jasperfx.events.2.13.0.nupkg.sha512",
         "jasperfx.events.nuspec",
         "lib/net10.0/JasperFx.Events.dll",
         "lib/net10.0/JasperFx.Events.xml",
-        "lib/net8.0/JasperFx.Events.dll",
-        "lib/net8.0/JasperFx.Events.xml",
         "lib/net9.0/JasperFx.Events.dll",
-        "lib/net9.0/JasperFx.Events.xml"
+        "lib/net9.0/JasperFx.Events.xml",
+        "logo.jpg"
       ]
     },
-    "JasperFx.RuntimeCompiler/4.4.0": {
-      "sha512": "n5dOtQlytGsCfpRyOGDw/qHaqPDd2GcR7pgO53bQto1T82/VZjQdzkfuLQt8vUMY6D+m1TgqUjqedNFDT1+rEQ==",
+    "JasperFx.RuntimeCompiler/5.0.0": {
+      "sha512": "FKP0HSPN3p8YgJHWaTTqk/wZhLpOrShjrZ9rT3dAuKfj7EvC/NepRxeJ5Nq55tIcLAwR/pLVedxhxL9/kizwFg==",
       "type": "package",
-      "path": "jasperfx.runtimecompiler/4.4.0",
+      "path": "jasperfx.runtimecompiler/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.runtimecompiler.4.4.0.nupkg.sha512",
+        "README.md",
+        "jasperfx.runtimecompiler.5.0.0.nupkg.sha512",
         "jasperfx.runtimecompiler.nuspec",
         "lib/net10.0/JasperFx.RuntimeCompiler.dll",
         "lib/net10.0/JasperFx.RuntimeCompiler.xml",
-        "lib/net8.0/JasperFx.RuntimeCompiler.dll",
-        "lib/net8.0/JasperFx.RuntimeCompiler.xml",
         "lib/net9.0/JasperFx.RuntimeCompiler.dll",
-        "lib/net9.0/JasperFx.RuntimeCompiler.xml"
+        "lib/net9.0/JasperFx.RuntimeCompiler.xml",
+        "logo.jpg"
+      ]
+    },
+    "JasperFx.SourceGenerator/2.13.0": {
+      "sha512": "8ZXOEwsQpaXojIHxPEyaSwVlPnXiYuK+gUl2F/y1mXsvQ4aucydKReDoIcspZPxfiQ/UDMgq2jYmNz+pDfjaoA==",
+      "type": "package",
+      "path": "jasperfx.sourcegenerator/2.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/JasperFx.SourceGenerator.dll",
+        "jasperfx.sourcegenerator.2.13.0.nupkg.sha512",
+        "jasperfx.sourcegenerator.nuspec",
+        "logo.jpg"
       ]
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/10.0.8": {
@@ -4303,36 +4338,10 @@
         "opentelemetry.instrumentation.runtime.nuspec"
       ]
     },
-    "Polly/8.7.0": {
-      "sha512": "0qR4f0OR8FeCAfLWcfwzAM7w6EmpUgwa22PgxKjcL25dEAto7sKpQQXbtxp38vVvK+V3RFkh/TeI7g/iUdoYIQ==",
+    "Polly.Core/8.6.5": {
+      "sha512": "t+sUVrIwvo7UmsgHGgOG9F0GDZSRIm47u2ylH17Gvcv1q5hNEwgD5GoBlFyc0kh/pebmPyrAgvGsR/65ZBaXlg==",
       "type": "package",
-      "path": "polly/8.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "lib/net462/Polly.dll",
-        "lib/net462/Polly.pdb",
-        "lib/net462/Polly.xml",
-        "lib/net472/Polly.dll",
-        "lib/net472/Polly.pdb",
-        "lib/net472/Polly.xml",
-        "lib/net6.0/Polly.dll",
-        "lib/net6.0/Polly.pdb",
-        "lib/net6.0/Polly.xml",
-        "lib/netstandard2.0/Polly.dll",
-        "lib/netstandard2.0/Polly.pdb",
-        "lib/netstandard2.0/Polly.xml",
-        "package-icon.png",
-        "package-readme.md",
-        "polly.8.7.0.nupkg.sha512",
-        "polly.nuspec"
-      ]
-    },
-    "Polly.Core/8.7.0": {
-      "sha512": "BS2t+nsBer16PIebCEPNBK5fgMisADQyRCd7K+BgkMWpFmSaiYE+rVVNpFhGRqUkJmNSLmw0uCNzHHWfgml28Q==",
-      "type": "package",
-      "path": "polly.core/8.7.0",
+      "path": "polly.core/8.6.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4354,7 +4363,7 @@
         "lib/netstandard2.0/Polly.Core.xml",
         "package-icon.png",
         "package-readme.md",
-        "polly.core.8.7.0.nupkg.sha512",
+        "polly.core.8.6.5.nupkg.sha512",
         "polly.core.nuspec"
       ]
     },
@@ -4431,14 +4440,16 @@
         "rabbitmq.client.nuspec"
       ]
     },
-    "Spectre.Console/0.53.0": {
-      "sha512": "m2iv8Egfywp7FaNLKCmCFHbSf36D4ctzZKvlAK9NXMyGLh6L+CnrZWK8o+LOYsoAS1jtoHn0W1BT0W8vuq/FUw==",
+    "Spectre.Console/0.55.0": {
+      "sha512": "2TVhUHFsDux0Z+y2Hv4bFsOMuON4SuotEEKkMparFkp5Rm259naaaEQrN4Sv6C1cbsiGKPjfkJDGgUp+hZPjTw==",
       "type": "package",
-      "path": "spectre.console/0.53.0",
+      "path": "spectre.console/0.55.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
+        "lib/net10.0/Spectre.Console.dll",
+        "lib/net10.0/Spectre.Console.xml",
         "lib/net8.0/Spectre.Console.dll",
         "lib/net8.0/Spectre.Console.xml",
         "lib/net9.0/Spectre.Console.dll",
@@ -4446,8 +4457,29 @@
         "lib/netstandard2.0/Spectre.Console.dll",
         "lib/netstandard2.0/Spectre.Console.xml",
         "logo.png",
-        "spectre.console.0.53.0.nupkg.sha512",
+        "spectre.console.0.55.0.nupkg.sha512",
         "spectre.console.nuspec"
+      ]
+    },
+    "Spectre.Console.Ansi/0.55.0": {
+      "sha512": "GIfgOvuF8MpU52bprhwtDEtx0gmVIGOepM8bw0lH/TSMD0rg1Xp+5Y53kPG8rFVdcpbNANlhDQ5mEVVPO3/2Tg==",
+      "type": "package",
+      "path": "spectre.console.ansi/0.55.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/Spectre.Console.Ansi.dll",
+        "lib/net10.0/Spectre.Console.Ansi.xml",
+        "lib/net8.0/Spectre.Console.Ansi.dll",
+        "lib/net8.0/Spectre.Console.Ansi.xml",
+        "lib/net9.0/Spectre.Console.Ansi.dll",
+        "lib/net9.0/Spectre.Console.Ansi.xml",
+        "lib/netstandard2.0/Spectre.Console.Ansi.dll",
+        "lib/netstandard2.0/Spectre.Console.Ansi.xml",
+        "logo.png",
+        "spectre.console.ansi.0.55.0.nupkg.sha512",
+        "spectre.console.ansi.nuspec"
       ]
     },
     "System.CodeDom/6.0.0": {
@@ -4659,44 +4691,69 @@
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     },
-    "WolverineFx/5.16.4": {
-      "sha512": "IDEDhimluawCxCn5Oo4I/+QEkRWdB0rlKRLMCkUE5Hule3weQTLA8uIAhkij4Gjb7Pxp4ZaIT2HXEN9n2slgBw==",
+    "WolverineFx/6.14.0": {
+      "sha512": "2AqBUVfjBDDQ6d8nwVDj/rQ5Ife/m8mcsWbuyqBL9ov6HCZ9pZaEKTbmwiO7IpsW16xPR6wqW4ugO2lvS0fSWQ==",
       "type": "package",
-      "path": "wolverinefx/5.16.4",
+      "path": "wolverinefx/6.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net10.0/Wolverine.dll",
         "lib/net10.0/Wolverine.xml",
-        "lib/net8.0/Wolverine.dll",
-        "lib/net8.0/Wolverine.xml",
         "lib/net9.0/Wolverine.dll",
         "lib/net9.0/Wolverine.xml",
-        "wolverinefx.5.16.4.nupkg.sha512",
+        "logo.png",
+        "wolverinefx.6.14.0.nupkg.sha512",
         "wolverinefx.nuspec"
       ]
     },
-    "WolverineFx.RabbitMQ/5.16.4": {
-      "sha512": "srdrMeA6VOlvt9Af21Y/mowqTHoKiGI8vYBHlMki4CVJ7DfMH4LBiuKWplpMtvydfiCMXf6nKntmsF+ryklM4Q==",
+    "WolverineFx.Newtonsoft/6.14.0": {
+      "sha512": "ZRjoh923j6M4Xf59H4HMWuDtk+a1GbDvNMOZEnUB6BOtmZQJL+gn6lIQL8AtjQU9of8pQi4uCiUfNxQdcbc/2w==",
       "type": "package",
-      "path": "wolverinefx.rabbitmq/5.16.4",
+      "path": "wolverinefx.newtonsoft/6.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Wolverine.Newtonsoft.dll",
+        "lib/net10.0/Wolverine.Newtonsoft.xml",
+        "lib/net9.0/Wolverine.Newtonsoft.dll",
+        "lib/net9.0/Wolverine.Newtonsoft.xml",
+        "logo.png",
+        "wolverinefx.newtonsoft.6.14.0.nupkg.sha512",
+        "wolverinefx.newtonsoft.nuspec"
+      ]
+    },
+    "WolverineFx.RabbitMQ/6.14.0": {
+      "sha512": "ZOJ7n9NcqoNA+b9EzvSfkElWBnIePobYdc+RfC4vdJU1RK8hiABeiFmTfNodHau2YnuWoXjF32/G7qNw9RowCw==",
+      "type": "package",
+      "path": "wolverinefx.rabbitmq/6.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net10.0/Wolverine.RabbitMQ.dll",
         "lib/net10.0/Wolverine.RabbitMQ.xml",
-        "lib/net8.0/Wolverine.RabbitMQ.dll",
-        "lib/net8.0/Wolverine.RabbitMQ.xml",
         "lib/net9.0/Wolverine.RabbitMQ.dll",
         "lib/net9.0/Wolverine.RabbitMQ.xml",
-        "wolverinefx.rabbitmq.5.16.4.nupkg.sha512",
+        "logo.png",
+        "wolverinefx.rabbitmq.6.14.0.nupkg.sha512",
         "wolverinefx.rabbitmq.nuspec"
       ]
     },
-    "Common/1.0.0": {
-      "type": "project",
-      "path": "../Common/Common.csproj",
-      "msbuildProject": "../Common/Common.csproj"
+    "WolverineFx.RuntimeCompilation/6.14.0": {
+      "sha512": "SVMGIoBAm6pjiYaAmYmPeTcQNZkeUbWa8UsunoG6SiwgX1z7imuR8Hu7jezrsGuZZwjn3qwKRvHgh0cOuLqWWQ==",
+      "type": "package",
+      "path": "wolverinefx.runtimecompilation/6.14.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Wolverine.RuntimeCompilation.dll",
+        "lib/net10.0/Wolverine.RuntimeCompilation.xml",
+        "lib/net9.0/Wolverine.RuntimeCompilation.dll",
+        "lib/net9.0/Wolverine.RuntimeCompilation.xml",
+        "logo.png",
+        "wolverinefx.runtimecompilation.6.14.0.nupkg.sha512",
+        "wolverinefx.runtimecompilation.nuspec"
+      ]
     },
     "Contracts/1.0.0": {
       "type": "project",
@@ -4711,11 +4768,14 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Aspire.Keycloak.Authentication >= 13.4.6-preview.1.26319.6",
       "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL >= 13.4.6",
-      "Common >= 1.0.0",
       "Contracts >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
-      "Microsoft.EntityFrameworkCore.Design >= 10.0.9"
+      "Microsoft.EntityFrameworkCore.Design >= 10.0.9",
+      "Overflow.ServiceDefaults >= 1.0.0",
+      "WolverineFx.RabbitMQ >= 6.14.0",
+      "WolverineFx.RuntimeCompilation >= 6.14.0"
     ]
   },
   "packageFolders": {
@@ -4744,11 +4804,11 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Common\\Common.csproj": {
-              "projectPath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Common\\Common.csproj"
-            },
             "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Contracts\\Contracts.csproj": {
               "projectPath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Contracts\\Contracts.csproj"
+            },
+            "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.ServiceDefaults\\Overflow.ServiceDefaults.csproj": {
+              "projectPath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.ServiceDefaults\\Overflow.ServiceDefaults.csproj"
             }
           }
         }
@@ -4769,6 +4829,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Aspire.Keycloak.Authentication": {
+            "target": "Package",
+            "version": "[13.4.6-preview.1.26319.6, )"
+          },
           "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[13.4.6, )"
@@ -4782,6 +4846,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.9, )"
+          },
+          "WolverineFx.RabbitMQ": {
+            "target": "Package",
+            "version": "[6.14.0, )"
+          },
+          "WolverineFx.RuntimeCompilation": {
+            "target": "Package",
+            "version": "[6.14.0, )"
           }
         },
         "imports": [
