@@ -55,6 +55,14 @@
               "version": "[13.4.6, )",
               "autoReferenced": true
             },
+            "Aspire.Hosting.Docker": {
+              "target": "Package",
+              "version": "[13.4.6, )"
+            },
+            "Aspire.Hosting.JavaScript": {
+              "target": "Package",
+              "version": "[13.4.6, )"
+            },
             "Aspire.Hosting.Keycloak": {
               "target": "Package",
               "version": "[13.4.6-preview.1.26319.6, )"
@@ -69,6 +77,10 @@
               "version": "[13.4.6, )"
             },
             "Aspire.Hosting.RabbitMQ": {
+              "target": "Package",
+              "version": "[13.4.6, )"
+            },
+            "Aspire.Hosting.Yarp": {
               "target": "Package",
               "version": "[13.4.6, )"
             }
