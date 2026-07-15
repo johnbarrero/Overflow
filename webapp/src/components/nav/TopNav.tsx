@@ -5,6 +5,7 @@ import {AcademicCapIcon, MagnifyingGlassIcon} from "@heroicons/react/24/solid";
 import {Input} from "@heroui/react";
 import ThemeToggle from "@/components/nav/ThemeToggle";
 import {Button} from "@heroui/button";
+import SearchInput from "@/components/nav/SearchInput";
 
 
 export default function TopNav() {
@@ -31,12 +32,7 @@ export default function TopNav() {
                 </div>
 
                 {/* px=padding, mx=margin, ml=margin left */}
-                <Input 
-                    startContent={<MagnifyingGlassIcon className='size-6'/>}
-                    className='ml-6'
-                    type='search'
-                    placeholder='Search'
-                />
+                <SearchInput/>
                 
                 {/*shrink-0: Evita que los botones se deformen si la pantalla se hace más pequeña*/}
                 <div className='flex basis-1/4 shrink-0 justify-end gap-3'>

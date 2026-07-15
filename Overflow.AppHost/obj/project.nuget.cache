@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qjdOLDnSsTo=",
+  "dgSpecHash": "QJFyF5XJwsk=",
   "success": true,
   "projectFilePath": "C:\\Users\\johnb\\RiderProjects\\AspireCourse\\demo\\Overflow\\Overflow.AppHost\\Overflow.AppHost.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.docker\\13.4.6\\aspire.hosting.docker.13.4.6.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.javascript\\13.4.6\\aspire.hosting.javascript.13.4.6.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.keycloak\\13.4.6-preview.1.26319.6\\aspire.hosting.keycloak.13.4.6-preview.1.26319.6.nupkg.sha512",
+    "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.nodejs\\9.5.2\\aspire.hosting.nodejs.9.5.2.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.6\\aspire.hosting.orchestration.win-x64.13.4.6.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.postgresql\\13.4.6\\aspire.hosting.postgresql.13.4.6.nupkg.sha512",
     "C:\\Users\\johnb\\.nuget\\packages\\aspire.hosting.rabbitmq\\13.4.6\\aspire.hosting.rabbitmq.13.4.6.nupkg.sha512",

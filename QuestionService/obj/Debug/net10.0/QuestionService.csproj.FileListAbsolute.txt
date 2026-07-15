@@ -166,9 +166,7 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debu
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\NewId.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\RabbitMQ.Client.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Spectre.Console.dll
-C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Spectre.Console.Ansi.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Wolverine.dll
-C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Wolverine.Newtonsoft.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Wolverine.RabbitMQ.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\JasperFx.RuntimeCompiler.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -176,7 +174,6 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debu
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Microsoft.CodeAnalysis.Scripting.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
-C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Wolverine.RuntimeCompilation.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll
@@ -231,3 +228,7 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debu
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Contracts.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Contracts.pdb
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Typesense.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Polly.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Common.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Debug\net10.0\Common.pdb

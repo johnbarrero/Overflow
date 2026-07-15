@@ -45,7 +45,7 @@ public static class WolverineExtensions
         {
             traceProvideBuilder.SetResourceBuilder(ResourceBuilder.CreateDefault()
                     .AddService(builder.Environment.ApplicationName))
-                .AddSource("Wolverine");
+                .AddSource("Wolverine"); 
         });
         
         builder.UseWolverine( opts =>
