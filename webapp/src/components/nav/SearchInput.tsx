@@ -1,3 +1,5 @@
+'use client'
+
 import {Question} from "@/lib/types";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/solid";
 import {Input, Listbox, ListboxItem} from "@heroui/react";
