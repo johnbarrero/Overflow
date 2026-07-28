@@ -1,3 +1,5 @@
+'use client'
+
 import {Question} from "@/lib/types";
 import {Avatar, Chip} from "@heroui/react";
 import Link from "next/link";

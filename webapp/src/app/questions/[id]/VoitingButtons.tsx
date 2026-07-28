@@ -15,7 +15,7 @@ export default function VoitingButtons({accepted}: Props) {
             >
                 <ArrowUpCircleIcon className='w-12'/>
             </Button>
-            <span className='text-xl font-sembold'>0</span>
+            <span className='text-xl font-sembiold'>0</span>
             <Button
                 isIconOnly
                 variant='light'
