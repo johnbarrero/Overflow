@@ -1,6 +1,6 @@
 services:
   production-dashboard:
-    image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:latest"
+    image: "mcr.microsoft.com/dotnet/nightly/aspire-dashboard:13.5"
     ports:
       - "8080:18888"
     expose:
@@ -21,11 +21,13 @@ services:
       KC_FEATURES: "opentelemetry"
       KC_HTTP_ENABLED: "true"
       KC_HOSTNAME_STRICT: "false"
+      VIRTUAL_HOST: "id.overflow.local"
+      VIRTUAL_PORT: "8080"
+      KC_HOSTNAME: "https://id.overflow.local"
+      KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://production-dashboard:18889"
       OTEL_EXPORTER_OTLP_PROTOCOL: "grpc"
       OTEL_SERVICE_NAME: "keycloak"
-    ports:
-      - "6001:8080"
     expose:
       - "8080"
       - "9000"
@@ -34,6 +36,10 @@ services:
         target: "/opt/keycloak/data"
         source: "keycloak-data"
         read_only: false
+      - type: "bind"
+        target: "/opt/keycloak/data/import"
+        source: "${KEYCLOAK_BINDMOUNT_0}"
+        read_only: true
     networks:
       - "aspire"
   postgres:
@@ -90,8 +96,6 @@ services:
       HTTP_PORTS: "${QUESTION_SVC_PORT}"
       KEYCLOAK_HTTP: "http://keycloak:8080"
       services__keycloak__http__0: "http://keycloak:8080"
-      KEYCLOAK_KEYCLOAK: "keycloak://keycloak:8080"
-      services__keycloak__keycloak__0: "keycloak://keycloak:8080"
       ConnectionStrings__questionDb: "Host=postgres;Port=5432;Username=postgres;Password=${POSTGRES_PASSWORD};Database=questionDb"
       QUESTIONDB_HOST: "postgres"
       QUESTIONDB_PORT: "5432"
@@ -158,10 +162,12 @@ services:
       QUESTION_SVC_HTTP: "http://question-svc:${QUESTION_SVC_PORT}"
       REVERSEPROXY__ROUTES__route0__MATCH__PATH: "/questions/{**catch-all}"
       REVERSEPROXY__ROUTES__route0__CLUSTERID: "cluster_question-svc"
-      REVERSEPROXY__ROUTES__route1__MATCH__PATH: "/tags/{**catch-all}"
+      REVERSEPROXY__ROUTES__route1__MATCH__PATH: "/test/{**catch-all}"
       REVERSEPROXY__ROUTES__route1__CLUSTERID: "cluster_question-svc"
-      REVERSEPROXY__ROUTES__route2__MATCH__PATH: "/search/{**catch-all}"
-      REVERSEPROXY__ROUTES__route2__CLUSTERID: "cluster_search-svc"
+      REVERSEPROXY__ROUTES__route2__MATCH__PATH: "/tags/{**catch-all}"
+      REVERSEPROXY__ROUTES__route2__CLUSTERID: "cluster_question-svc"
+      REVERSEPROXY__ROUTES__route3__MATCH__PATH: "/search/{**catch-all}"
+      REVERSEPROXY__ROUTES__route3__CLUSTERID: "cluster_search-svc"
       REVERSEPROXY__CLUSTERS__cluster_question-svc__DESTINATIONS__destination1__ADDRESS: "https+http://question-svc"
       REVERSEPROXY__CLUSTERS__cluster_search-svc__DESTINATIONS__destination1__ADDRESS: "https+http://search-svc"
       services__question-svc__http__0: "http://question-svc:${QUESTION_SVC_PORT}"
@@ -170,6 +176,8 @@ services:
       services__search-svc__http__0: "http://search-svc:${SEARCH_SVC_PORT}"
       SEARCH_SVC_HTTPS: "https://search-svc:${SEARCH_SVC_PORT}"
       ASPNETCORE_URLS: "http://*:8001"
+      VIRTUAL_HOST: "api.overflow.local"
+      VIRTUAL_PORT: "8001"
       OTEL_EXPORTER_OTLP_ENDPOINT: "http://production-dashboard:18889"
       OTEL_EXPORTER_OTLP_PROTOCOL: "grpc"
       OTEL_SERVICE_NAME: "gateway"
@@ -177,6 +185,38 @@ services:
       - "8001:8001"
     expose:
       - "5000"
+    networks:
+      - "aspire"
+  webapp:
+    image: "${WEBAPP_IMAGE}"
+    environment:
+      NODE_ENV: "production"
+      KEYCLOAK_HTTP: "http://keycloak:8080"
+      services__keycloak__http__0: "http://keycloak:8080"
+      PORT: "4000"
+      VIRTUAL_HOST: "app.overflow.local"
+      VIRTUAL_PORT: "4000"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://production-dashboard:18889"
+      OTEL_EXPORTER_OTLP_PROTOCOL: "grpc"
+      OTEL_SERVICE_NAME: "webapp"
+    expose:
+      - "4000"
+    networks:
+      - "aspire"
+  nginx-proxy:
+    image: "nginxproxy/nginx-proxy:1.11"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - type: "bind"
+        target: "/tmp/docker.sock"
+        source: "/var/run/docker.sock"
+        read_only: true
+      - type: "bind"
+        target: "/etc/nginx/certs"
+        source: "${NGINX_PROXY_BINDMOUNT_0}"
+        read_only: true
     networks:
       - "aspire"
 networks:

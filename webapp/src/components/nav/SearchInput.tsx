@@ -2,7 +2,7 @@
 
 import {Question} from "@/lib/types";
 import {MagnifyingGlassIcon} from "@heroicons/react/24/solid";
-import {Input, Listbox, ListboxItem} from "@heroui/react";
+import {Input, Listbox, ListboxItem, Spinner} from "@heroui/react";
 import {useEffect, useRef, useState} from "react";
 import {searchQuestions} from "@/lib/actions/question-actions";
 
@@ -46,6 +46,7 @@ export default function SearchInput() {
                 placeholder='Search'
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                endContent={loading && <Spinner size='sm' /> }
             />
             {showDropdown && results && (
                 <ul className='absolute top-full z-50 bg-white dark:bg-default-50 shadow-lg border-2 border-default-500 w-[50%]'>

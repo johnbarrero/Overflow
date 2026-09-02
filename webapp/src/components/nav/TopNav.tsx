@@ -1,7 +1,6 @@
 import Link from "next/link";
 import {AcademicCapIcon} from "@heroicons/react/24/solid";
 import ThemeToggle from "@/components/nav/ThemeToggle";
-import {Button} from "@heroui/button";
 import SearchInput from "@/components/nav/SearchInput";
 import LoginButton from "@/components/nav/LoginButton";
 import {getCurrentUser} from "@/lib/actions/auth-actions";
