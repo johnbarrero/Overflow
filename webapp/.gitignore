@@ -43,3 +43,6 @@ next-env.d.ts
 # Ignorar librerías dinámicas compiladas
 *.dll
 *.pdb
+
+/infra/devcerts/api.overflow.local.key
+/infra/devcerts/app.overflow.local.key

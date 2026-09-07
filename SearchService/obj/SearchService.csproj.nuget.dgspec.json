@@ -51,7 +51,7 @@
           "dependencies": {
             "Aspire.Keycloak.Authentication": {
               "target": "Package",
-              "version": "[13.4.6-preview.1.26319.6, )"
+              "version": "[13.5.3-preview.1.26425.3, )"
             },
             "Polly": {
               "target": "Package",
