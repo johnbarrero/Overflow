@@ -231,3 +231,8 @@ C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\obj\Rele
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\Polly.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\Common.dll
 C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\Common.pdb
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\AngleSharp.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\AngleSharp.Css.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\HtmlSanitizer.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\Typesense.dll
+C:\Users\johnb\RiderProjects\AspireCourse\demo\Overflow\QuestionService\bin\Release\net10.0\linux-x64\Microsoft.Bcl.Cryptography.dll

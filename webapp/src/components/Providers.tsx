@@ -16,7 +16,6 @@ export default function Providers({children}: { children: ReactNode }) {
             const {data: tags} = await getTags()
             if (tags) setTags(tags);
         }
-
         void loadTags();
     }, [setTags])
     return (

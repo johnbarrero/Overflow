@@ -59,7 +59,7 @@
             },
             "WolverineFx.RabbitMQ": {
               "target": "Package",
-              "version": "[5.16.4, )"
+              "version": "[5.9.1, )"
             }
           },
           "imports": [

@@ -2,6 +2,7 @@
 import {HomeIcon, QuestionMarkCircleIcon, TagIcon, UserIcon} from "@heroicons/react/24/solid";
 import {Listbox, ListboxItem} from "@heroui/react";
 import { usePathname } from "next/navigation";
+import {UserGroupIcon} from "@heroicons/react/20/solid";
 export default function SideMenu() {
     const pathname= usePathname();
     
@@ -9,7 +10,8 @@ export default function SideMenu() {
         {key: 'home', icon: HomeIcon, text:'Home', href: '/'},
         {key: 'questions', icon: QuestionMarkCircleIcon, text:'Questions', href: '/questions'},
         {key: 'tags', icon: TagIcon, text:'Tags', href: '/tags'},
-        {key: 'session', icon: UserIcon, text:'Session', href: '/session'},
+        {key: 'session', icon: UserIcon, text:'User Session', href: '/session'},
+        {key: 'profile', icon: UserGroupIcon, text:'Profile', href: '/profile'},
     ]
         return (
             <Listbox

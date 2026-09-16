@@ -13,3 +13,8 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+*.dll
+*.pdb
+
+/infra/devcerts/api.overflow.local.key
+/infra/devcerts/app.overflow.local.key

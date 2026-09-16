@@ -55,7 +55,7 @@
           }
         }
       },
-      "JasperFx/1.20.0": {
+      "JasperFx/1.12.0": {
         "type": "package",
         "dependencies": {
           "FastExpressionCompiler": "5.3.0",
@@ -75,10 +75,10 @@
           }
         }
       },
-      "JasperFx.Events/1.22.0": {
+      "JasperFx.Events/1.12.2": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.20.0"
+          "JasperFx": "1.11.1"
         },
         "compile": {
           "lib/net10.0/JasperFx.Events.dll": {
@@ -91,13 +91,13 @@
           }
         }
       },
-      "JasperFx.RuntimeCompiler/4.4.0": {
+      "JasperFx.RuntimeCompiler/4.3.1": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.18.0",
-          "Microsoft.CodeAnalysis": "5.0.0",
-          "Microsoft.CodeAnalysis.CSharp": "5.0.0",
-          "Microsoft.CodeAnalysis.Scripting": "5.0.0"
+          "JasperFx": "1.12.0",
+          "Microsoft.CodeAnalysis": "[4.14.0, 6.0.0)",
+          "Microsoft.CodeAnalysis.CSharp": "[4.14.0, 6.0.0)",
+          "Microsoft.CodeAnalysis.Scripting": "[4.14.0, 6.0.0)"
         },
         "compile": {
           "lib/net10.0/JasperFx.RuntimeCompiler.dll": {
@@ -218,14 +218,14 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.CodeAnalysis/5.0.0": {
+      "Microsoft.CodeAnalysis/4.14.0": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.Bcl.AsyncInterfaces": "9.0.0",
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "[5.0.0]",
-          "Microsoft.CodeAnalysis.VisualBasic.Workspaces": "[5.0.0]",
+          "Microsoft.CodeAnalysis.CSharp.Workspaces": "[4.14.0]",
+          "Microsoft.CodeAnalysis.VisualBasic.Workspaces": "[4.14.0]",
           "System.Composition": "9.0.0"
         }
       },
@@ -236,7 +236,7 @@
           "buildTransitive/Microsoft.CodeAnalysis.Analyzers.targets": {}
         }
       },
-      "Microsoft.CodeAnalysis.Common/5.0.0": {
+      "Microsoft.CodeAnalysis.Common/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0"
@@ -293,11 +293,11 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp/5.0.0": {
+      "Microsoft.CodeAnalysis.CSharp/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]"
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]"
         },
         "compile": {
           "lib/net9.0/Microsoft.CodeAnalysis.CSharp.dll": {
@@ -351,13 +351,13 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Scripting/5.0.0": {
+      "Microsoft.CodeAnalysis.CSharp.Scripting/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.CSharp": "[5.0.0]",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]",
-          "Microsoft.CodeAnalysis.Scripting.Common": "[5.0.0]"
+          "Microsoft.CodeAnalysis.CSharp": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Scripting.Common": "[4.14.0]"
         },
         "compile": {
           "lib/net9.0/Microsoft.CodeAnalysis.CSharp.Scripting.dll": {
@@ -411,14 +411,14 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Workspaces/5.0.0": {
+      "Microsoft.CodeAnalysis.CSharp.Workspaces/4.14.0": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.CSharp": "[5.0.0]",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "[5.0.0]",
+          "Microsoft.CodeAnalysis.CSharp": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.14.0]",
           "System.Composition": "9.0.0"
         },
         "compile": {
@@ -473,18 +473,18 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Scripting/5.0.0": {
+      "Microsoft.CodeAnalysis.Scripting/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.CSharp.Scripting": "[5.0.0]"
+          "Microsoft.CodeAnalysis.CSharp.Scripting": "[4.14.0]"
         }
       },
-      "Microsoft.CodeAnalysis.Scripting.Common/5.0.0": {
+      "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]"
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]"
         },
         "compile": {
           "lib/net9.0/Microsoft.CodeAnalysis.Scripting.dll": {
@@ -538,11 +538,11 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.VisualBasic/5.0.0": {
+      "Microsoft.CodeAnalysis.VisualBasic/4.14.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]"
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]"
         },
         "compile": {
           "lib/net9.0/Microsoft.CodeAnalysis.VisualBasic.dll": {
@@ -596,14 +596,14 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.VisualBasic.Workspaces/5.0.0": {
+      "Microsoft.CodeAnalysis.VisualBasic.Workspaces/4.14.0": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]",
-          "Microsoft.CodeAnalysis.VisualBasic": "[5.0.0]",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "[5.0.0]",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
+          "Microsoft.CodeAnalysis.VisualBasic": "[4.14.0]",
+          "Microsoft.CodeAnalysis.Workspaces.Common": "[4.14.0]",
           "System.Composition": "9.0.0"
         },
         "compile": {
@@ -658,12 +658,12 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.Workspaces.Common/5.0.0": {
+      "Microsoft.CodeAnalysis.Workspaces.Common/4.14.0": {
         "type": "package",
         "dependencies": {
           "Humanizer.Core": "2.14.1",
           "Microsoft.CodeAnalysis.Analyzers": "3.11.0",
-          "Microsoft.CodeAnalysis.Common": "[5.0.0]",
+          "Microsoft.CodeAnalysis.Common": "[4.14.0]",
           "System.Composition": "9.0.0"
         },
         "compile": {
@@ -1399,12 +1399,12 @@
           }
         }
       },
-      "WolverineFx/5.16.4": {
+      "WolverineFx/5.9.1": {
         "type": "package",
         "dependencies": {
-          "JasperFx": "1.20.0",
-          "JasperFx.Events": "1.22.0",
-          "JasperFx.RuntimeCompiler": "4.4.0",
+          "JasperFx": "1.12.0",
+          "JasperFx.Events": "1.12.2",
+          "JasperFx.RuntimeCompiler": "4.3.1",
           "NewId": "4.0.1",
           "Newtonsoft.Json": "13.0.3"
         },
@@ -1419,11 +1419,11 @@
           }
         }
       },
-      "WolverineFx.RabbitMQ/5.16.4": {
+      "WolverineFx.RabbitMQ/5.9.1": {
         "type": "package",
         "dependencies": {
           "RabbitMQ.Client": "7.1.2",
-          "WolverineFx": "5.16.4"
+          "WolverineFx": "5.9.1"
         },
         "compile": {
           "lib/net10.0/Wolverine.RabbitMQ.dll": {
@@ -1443,7 +1443,7 @@
           "Aspire.Keycloak.Authentication": "13.5.3-preview.1.26425.3",
           "Overflow.ServiceDefaults": "1.0.0",
           "Polly": "8.7.0",
-          "WolverineFx.RabbitMQ": "5.16.4"
+          "WolverineFx.RabbitMQ": "5.9.1"
         },
         "compile": {
           "bin/placeholder/Common.dll": {}
@@ -1571,14 +1571,14 @@
         "imtools.nuspec"
       ]
     },
-    "JasperFx/1.20.0": {
-      "sha512": "ymb6lJnPITfnnw2IO2Ddtu4weXDcA5L80rXYKhF7H8IIsFCiTPQ1DAeGtNvsF22N3JBKNyKjAtg+fuTxgRMj3g==",
+    "JasperFx/1.12.0": {
+      "sha512": "nZoA1hJR2BYgp7LMfMoabNgRC6x1m5n1yK9N2ruxxR6ACBc/S6nhU8toVMRxPQNY2KuxCn2SJan5afjZiypKKQ==",
       "type": "package",
-      "path": "jasperfx/1.20.0",
+      "path": "jasperfx/1.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.1.20.0.nupkg.sha512",
+        "jasperfx.1.12.0.nupkg.sha512",
         "jasperfx.nuspec",
         "lib/net10.0/JasperFx.dll",
         "lib/net10.0/JasperFx.xml",
@@ -1588,14 +1588,14 @@
         "lib/net9.0/JasperFx.xml"
       ]
     },
-    "JasperFx.Events/1.22.0": {
-      "sha512": "QD01W8GFqHcMLYpqF4G5adkEHFexCntWSIWejvccVxmw8TTMmGf+EH8EoQI8EitdCc0XZ/ocGog2TQTRkqxG4A==",
+    "JasperFx.Events/1.12.2": {
+      "sha512": "6gjJfctHNyD2ucEtPzOU3LVGoaclwB6SlRRo5PSMCd257YbLXatJ4sOy24nokEqWzPlyvVdDKpa48ErYyKQCxw==",
       "type": "package",
-      "path": "jasperfx.events/1.22.0",
+      "path": "jasperfx.events/1.12.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.events.1.22.0.nupkg.sha512",
+        "jasperfx.events.1.12.2.nupkg.sha512",
         "jasperfx.events.nuspec",
         "lib/net10.0/JasperFx.Events.dll",
         "lib/net10.0/JasperFx.Events.xml",
@@ -1605,14 +1605,14 @@
         "lib/net9.0/JasperFx.Events.xml"
       ]
     },
-    "JasperFx.RuntimeCompiler/4.4.0": {
-      "sha512": "n5dOtQlytGsCfpRyOGDw/qHaqPDd2GcR7pgO53bQto1T82/VZjQdzkfuLQt8vUMY6D+m1TgqUjqedNFDT1+rEQ==",
+    "JasperFx.RuntimeCompiler/4.3.1": {
+      "sha512": "DWn8/+3BrMGWESbLXwp0uiacFj+HbQ4TzDFBOdC8xVE4yEHFctfedHZjPtIEQm0hDXyFCmKSjfek2KIycdfzwQ==",
       "type": "package",
-      "path": "jasperfx.runtimecompiler/4.4.0",
+      "path": "jasperfx.runtimecompiler/4.3.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "jasperfx.runtimecompiler.4.4.0.nupkg.sha512",
+        "jasperfx.runtimecompiler.4.3.1.nupkg.sha512",
         "jasperfx.runtimecompiler.nuspec",
         "lib/net10.0/JasperFx.RuntimeCompiler.dll",
         "lib/net10.0/JasperFx.RuntimeCompiler.xml",
@@ -1754,16 +1754,16 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.CodeAnalysis/5.0.0": {
-      "sha512": "X7vItpZDkGm4NS2wp4P1S07Z1e61LaBWDW5tPXE1c6z5/x9KbF2RymhAPoYg7Qoiyk7odEZ6EjBEJ47p3dBpYQ==",
+    "Microsoft.CodeAnalysis/4.14.0": {
+      "sha512": "T6TU+xURqfdaJKibiwI77hQqqoQTK2C9FtXD25qpNI6VZjQbqsyWLiuiISxrTGWq4TbB2DUSP6VOoRJkaF/lEw==",
       "type": "package",
-      "path": "microsoft.codeanalysis/5.0.0",
+      "path": "microsoft.codeanalysis/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "ThirdPartyNotices.rtf",
-        "microsoft.codeanalysis.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.nuspec"
       ]
     },
@@ -2469,10 +2469,10 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Microsoft.CodeAnalysis.Common/5.0.0": {
-      "sha512": "ZXRAdvH6GiDeHRyd3q/km8Z44RoM6FBWHd+gen/la81mVnAdHTEsEkO5J0TCNXBymAcx5UYKt5TvgKBhaLJEow==",
+    "Microsoft.CodeAnalysis.Common/4.14.0": {
+      "sha512": "PC3tuwZYnC+idaPuoC/AZpEdwrtX7qFpmnrfQkgobGIWiYmGi5MCRtl5mx6QrfMGQpK78X2lfIEoZDLg/qnuHg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.common/5.0.0",
+      "path": "microsoft.codeanalysis.common/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2526,14 +2526,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll",
-        "microsoft.codeanalysis.common.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.common.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.common.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp/5.0.0": {
-      "sha512": "5DSyJ9bk+ATuDy7fp2Zt0mJStDVKbBoiz1DyfAwSa+k4H4IwykAUcV3URelw5b8/iVbfSaOwkwmPUZH6opZKCw==",
+    "Microsoft.CodeAnalysis.CSharp/4.14.0": {
+      "sha512": "568a6wcTivauIhbeWcCwfWwIn7UV7MeHEBvFB2uzGIpM2OhJ4eM/FZ8KS0yhPoNxnSpjGzz7x7CIjTxhslojQA==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp/5.0.0",
+      "path": "microsoft.codeanalysis.csharp/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2587,14 +2587,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll",
-        "microsoft.codeanalysis.csharp.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.csharp.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp.Scripting/5.0.0": {
-      "sha512": "1sGloRYbG3743ut/+vuXy9/WaRQTm7mDtp71rBaVSmKpFntvo5Hcro1ubg6/3SeeLtiFYJl7V3Dk0Fo3CGlnHA==",
+    "Microsoft.CodeAnalysis.CSharp.Scripting/4.14.0": {
+      "sha512": "Ji6L9o7JY7tVMthoqInsksPLDE0tfAvJURC9Xe038N4FyXH2wKS4K/sG/bDbdJoK1oFIOLtyPEe2POJ+/AeGZg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp.scripting/5.0.0",
+      "path": "microsoft.codeanalysis.csharp.scripting/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2648,14 +2648,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll",
-        "microsoft.codeanalysis.csharp.scripting.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.scripting.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.csharp.scripting.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.CSharp.Workspaces/5.0.0": {
-      "sha512": "Al/Q8B+yO8odSqGVpSvrShMFDvlQdIBU//F3E6Rb0YdiLSALE9wh/pvozPNnfmh5HDnvU+mkmSjpz4hQO++jaA==",
+    "Microsoft.CodeAnalysis.CSharp.Workspaces/4.14.0": {
+      "sha512": "QkgCEM4qJo6gdtblXtNgHqtykS61fxW+820hx5JN6n9DD4mQtqNB+6fPeJ3GQWg6jkkGz6oG9yZq7H3Gf0zwYw==",
       "type": "package",
-      "path": "microsoft.codeanalysis.csharp.workspaces/5.0.0",
+      "path": "microsoft.codeanalysis.csharp.workspaces/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2709,27 +2709,27 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
-        "microsoft.codeanalysis.csharp.workspaces.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.csharp.workspaces.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.csharp.workspaces.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Scripting/5.0.0": {
-      "sha512": "/KgZdm6kRTrR/O2jqXxU5GWREYhtVmqcNWczyPt8hsQkFGFK/C6CrLWfG44FCUn0aPHGDRBHYjXlGosQ/H8oXw==",
+    "Microsoft.CodeAnalysis.Scripting/4.14.0": {
+      "sha512": "GE6S7aRRDgLfnzg5NWbKRqu1I0Jwdh1IPM3IxANRgLXtYQPqVr9FrtlNpnvMALSqMh0frPuB09+ZAHOIdnYUoQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.scripting/5.0.0",
+      "path": "microsoft.codeanalysis.scripting/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "ThirdPartyNotices.rtf",
-        "microsoft.codeanalysis.scripting.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.scripting.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.scripting.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Scripting.Common/5.0.0": {
-      "sha512": "XTulByMNxqXGCgMeODUoG2h4oK4/nLv1BcawRVcjv+UZHMpoaymtdaq3cJqlNrEvYEcbU48g5swJ3RhY1m3fBg==",
+    "Microsoft.CodeAnalysis.Scripting.Common/4.14.0": {
+      "sha512": "YRFoYZQU4VPlB+Xwwtj8gIHXxMyuhGXyj207IWHcsSNaJtW83My0FGv6jtN9gC/HkxgjdMYJORPjBwUx3+FVjQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.scripting.common/5.0.0",
+      "path": "microsoft.codeanalysis.scripting.common/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2783,14 +2783,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll",
-        "microsoft.codeanalysis.scripting.common.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.scripting.common.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.scripting.common.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.VisualBasic/5.0.0": {
-      "sha512": "sUBWvHs2HgHGA+b716dgjS7JiXGen5ntyohAurPLR1ZiZzFp3FlnVA7GrMTqVGdVJTVqiC3c4K8k1bk0gj6IPg==",
+    "Microsoft.CodeAnalysis.VisualBasic/4.14.0": {
+      "sha512": "AVGOptT9LlETb6BjTkK58XHi1xx7XO8KLbtpPfpwjNckoYoCgdkFz/LS1LfhE1Sq/OTqToqpBUJ48FvVhdKHeA==",
       "type": "package",
-      "path": "microsoft.codeanalysis.visualbasic/5.0.0",
+      "path": "microsoft.codeanalysis.visualbasic/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2844,14 +2844,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.resources.dll",
-        "microsoft.codeanalysis.visualbasic.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.visualbasic.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.visualbasic.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.VisualBasic.Workspaces/5.0.0": {
-      "sha512": "Nom4UuZVEZGaV6Qa+joJR/BawXZMtflvQJFKc0SaUc3LrZr/8LmRY5cn8mbvLOWIVfwWkQz+cVE6eQKu9qa65g==",
+    "Microsoft.CodeAnalysis.VisualBasic.Workspaces/4.14.0": {
+      "sha512": "fT9lTVerQJRTeGcN5aDcK05XccuWeAyCa+hbMUnRYg2qdwNuBwYjZRdjOICQmiWgka7MOyF9DQeXosad5s1Jpg==",
       "type": "package",
-      "path": "microsoft.codeanalysis.visualbasic.workspaces/5.0.0",
+      "path": "microsoft.codeanalysis.visualbasic.workspaces/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2905,14 +2905,14 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.VisualBasic.Workspaces.resources.dll",
-        "microsoft.codeanalysis.visualbasic.workspaces.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.visualbasic.workspaces.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.visualbasic.workspaces.nuspec"
       ]
     },
-    "Microsoft.CodeAnalysis.Workspaces.Common/5.0.0": {
-      "sha512": "ZbUmIvT6lqTNKiv06Jl5wf0MTMi1vQ1oH7ou4CLcs2C/no/L7EhP3T8y3XXvn9VbqMcJaJnEsNA1jwYUMgc5jg==",
+    "Microsoft.CodeAnalysis.Workspaces.Common/4.14.0": {
+      "sha512": "wNVK9JrqjqDC/WgBUFV6henDfrW87NPfo98nzah/+M/G1D6sBOPtXwqce3UQNn+6AjTnmkHYN1WV9XmTlPemTw==",
       "type": "package",
-      "path": "microsoft.codeanalysis.workspaces.common/5.0.0",
+      "path": "microsoft.codeanalysis.workspaces.common/4.14.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2966,7 +2966,7 @@
         "lib/netstandard2.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll",
         "lib/netstandard2.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll",
-        "microsoft.codeanalysis.workspaces.common.5.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.workspaces.common.4.14.0.nupkg.sha512",
         "microsoft.codeanalysis.workspaces.common.nuspec"
       ]
     },
@@ -4036,10 +4036,10 @@
         "typesense.nuspec"
       ]
     },
-    "WolverineFx/5.16.4": {
-      "sha512": "IDEDhimluawCxCn5Oo4I/+QEkRWdB0rlKRLMCkUE5Hule3weQTLA8uIAhkij4Gjb7Pxp4ZaIT2HXEN9n2slgBw==",
+    "WolverineFx/5.9.1": {
+      "sha512": "L8kSS9ik/DfPZuaQTHJ4OiQSGOlBwdlD4qedhyzaWSsGYXP4xCRxOnTSlYggY0lUYAllkMlw3sSBCsjm6jq85g==",
       "type": "package",
-      "path": "wolverinefx/5.16.4",
+      "path": "wolverinefx/5.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4049,14 +4049,14 @@
         "lib/net8.0/Wolverine.xml",
         "lib/net9.0/Wolverine.dll",
         "lib/net9.0/Wolverine.xml",
-        "wolverinefx.5.16.4.nupkg.sha512",
+        "wolverinefx.5.9.1.nupkg.sha512",
         "wolverinefx.nuspec"
       ]
     },
-    "WolverineFx.RabbitMQ/5.16.4": {
-      "sha512": "srdrMeA6VOlvt9Af21Y/mowqTHoKiGI8vYBHlMki4CVJ7DfMH4LBiuKWplpMtvydfiCMXf6nKntmsF+ryklM4Q==",
+    "WolverineFx.RabbitMQ/5.9.1": {
+      "sha512": "tE5B2XFOlbEQaipSzh8sB+k9Z3wSJ/WGcyYRmLiepGiHJuwMogCaNXcmjf+9R48s69PvrmHuG/kfEESXhkq83g==",
       "type": "package",
-      "path": "wolverinefx.rabbitmq/5.16.4",
+      "path": "wolverinefx.rabbitmq/5.9.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4066,7 +4066,7 @@
         "lib/net8.0/Wolverine.RabbitMQ.xml",
         "lib/net9.0/Wolverine.RabbitMQ.dll",
         "lib/net9.0/Wolverine.RabbitMQ.xml",
-        "wolverinefx.rabbitmq.5.16.4.nupkg.sha512",
+        "wolverinefx.rabbitmq.5.9.1.nupkg.sha512",
         "wolverinefx.rabbitmq.nuspec"
       ]
     },

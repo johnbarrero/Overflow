@@ -47,25 +47,25 @@
           "dependencies": {
             "Aspire.Dashboard.Sdk.win-x64": {
               "target": "Package",
-              "version": "[13.4.6, )",
+              "version": "[13.5.3, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.AppHost": {
               "target": "Package",
-              "version": "[13.4.6, )",
+              "version": "[13.5.3, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.Docker": {
               "target": "Package",
-              "version": "[13.4.6, )"
+              "version": "[13.5.3, )"
             },
             "Aspire.Hosting.JavaScript": {
               "target": "Package",
-              "version": "[13.4.6, )"
+              "version": "[13.5.3, )"
             },
             "Aspire.Hosting.Keycloak": {
               "target": "Package",
-              "version": "[13.4.6-preview.1.26319.6, )"
+              "version": "[13.5.3-preview.1.26425.3, )"
             },
             "Aspire.Hosting.NodeJs": {
               "target": "Package",
@@ -73,20 +73,20 @@
             },
             "Aspire.Hosting.Orchestration.win-x64": {
               "target": "Package",
-              "version": "[13.4.6, )",
+              "version": "[13.5.3, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.PostgreSQL": {
               "target": "Package",
-              "version": "[13.4.6, )"
+              "version": "[13.5.3, )"
             },
             "Aspire.Hosting.RabbitMQ": {
               "target": "Package",
-              "version": "[13.4.6, )"
+              "version": "[13.5.3, )"
             },
             "Aspire.Hosting.Yarp": {
               "target": "Package",
-              "version": "[13.4.6, )"
+              "version": "[13.5.3, )"
             }
           },
           "imports": [
