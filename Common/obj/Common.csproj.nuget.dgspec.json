@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[13.5.3-preview.1.26425.3, )"
             },
+            "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
             "Polly": {
               "target": "Package",
               "version": "[8.7.0, )"

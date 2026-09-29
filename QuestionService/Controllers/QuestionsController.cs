@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using Common;
 using Contracts;
 using FastExpressionCompiler;
 using Ganss.Xss;
@@ -8,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using QuestionService.Data;
 using QuestionService.DTOs;
 using QuestionService.Models;
+using QuestionService.RequestHelpers;
 using QuestionService.Services;
 using Reputation;
 using Wolverine;
@@ -20,7 +22,6 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
 {
     [Authorize]
     [HttpPost]
-    
     public async Task<ActionResult<Question>> CreateQuestion(CreateQuestionDto dto)
     {
         if (!await tagService.AreTagsValidAsync(dto.Tags))
@@ -40,8 +41,27 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
             AskerId = userId,
         };
 
-        db.Questions.Add(question);
-        await db.SaveChangesAsync();
+        await using var tx = await db.Database.BeginTransactionAsync();
+
+        try
+        {
+            db.Questions.Add(question);
+            
+            await db.SaveChangesAsync();
+            
+
+            await bus.PublishAsync(new QuestionCreated(question.Id, question.Title, question.Content,
+                question.CreatedAt, question.TagSlugs));
+            
+            await tx.CommitAsync();
+        }
+        catch (Exception e)
+        {
+            await tx.RollbackAsync();
+            Console.WriteLine(e);
+            throw;
+        }
+
 
         var slugs = question.TagSlugs.Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
 
@@ -53,23 +73,39 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
                     t => t.UsageCount + 1));
         }
 
-        await bus.PublishAsync(new QuestionCreated(question.Id, question.Title, question.Content,
-            question.CreatedAt, question.TagSlugs));
-
         return Created($"/questions/{question.Id}", question);
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Question>>> GetQuestions(string? tag)
+    public async Task<ActionResult<PaginationResult<Question>>> GetQuestions([FromQuery] QuestionsQuery q)
     {
         var query = db.Questions.AsQueryable();
 
-        if (!string.IsNullOrEmpty(tag))
+        if (!string.IsNullOrEmpty(q.Tag))
         {
-            query = query.Where(x => x.TagSlugs.Contains(tag));
+            query = query.Where(x => x.TagSlugs.Contains(q.Tag));
         }
 
-        return await query.OrderByDescending(x => x.CreatedAt).ToListAsync();
+        query = q.Sort switch
+        {
+            "newest" => query.OrderByDescending(x => x.CreatedAt),
+            "active" => query.OrderByDescending(x => new[]
+            {
+                x.CreatedAt,
+                x.UpdatedAt ?? DateTime.MinValue,
+                x.Answers.Max(a => (DateTime?)a.CreatedAt) ?? DateTime.MinValue,
+                x.Answers.Max(a => a.UpdatedAt) ?? DateTime.MinValue
+            }.Max()),
+            "unanswered" => query.Where(x => x.AnswerCount == 0)
+                .OrderByDescending(x => x.CreatedAt),
+            _ => query.OrderByDescending(x => x.CreatedAt)
+        };
+
+        //query = query.OrderByDescending(x => x.CreatedAt);
+
+        var result = await query.ToPaginatedListAsync(q);
+
+        return result;
     }
 
     [HttpGet("{id}")]
@@ -84,7 +120,7 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
         await db.Questions.Where(x => x.Id == id)
             .ExecuteUpdateAsync(setters => setters.SetProperty(x => x.ViewCount,
                 x => x.ViewCount + 1));
-        
+
         return question;
     }
 
@@ -100,15 +136,15 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
 
         if (!await tagService.AreTagsValidAsync(dto.Tags))
             return BadRequest("Invalid tags");
-        
+
         var original = question.TagSlugs.Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
         var incoming = dto.Tags.Distinct(StringComparer.OrdinalIgnoreCase).ToArray();
-        
+
         var removed = original.Except(incoming, StringComparer.OrdinalIgnoreCase).ToArray();
         var added = incoming.Except(original, StringComparer.OrdinalIgnoreCase).ToArray();
 
         var sanitizer = new HtmlSanitizer();
-        
+
         question.Title = dto.Title;
         question.Content = sanitizer.Sanitize(dto.Content);
         question.TagSlugs = dto.Tags;
@@ -119,15 +155,15 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
         if (removed.Length > 0)
         {
             await db.Tags
-                .Where(t=> removed.Contains(t.Slug) && t.UsageCount > 0)
+                .Where(t => removed.Contains(t.Slug) && t.UsageCount > 0)
                 .ExecuteUpdateAsync(x => x.SetProperty(t => t.UsageCount,
                     t => t.UsageCount - 1));
         }
-        
+
         if (added.Length > 0)
         {
             await db.Tags
-                .Where(t=> added.Contains(t.Slug))
+                .Where(t => added.Contains(t.Slug))
                 .ExecuteUpdateAsync(x => x.SetProperty(t => t.UsageCount,
                     t => t.UsageCount + 1));
         }
@@ -155,6 +191,7 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
 
         return NoContent();
     }
+
     //POST ANSWER
     [Authorize]
     [HttpPost("{questionId}/answers")]
@@ -205,6 +242,7 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
 
         return NoContent();
     }
+
     //DELETE ANSWER
     [Authorize]
     [HttpDelete("{questionId}/answers/{answerId}")]
@@ -224,6 +262,7 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
 
         return NoContent();
     }
+
     //POST ACCEPTANSWER
     [Authorize]
     [HttpPost("{questionId}/answers/{answerId}/accept")]
@@ -233,12 +272,12 @@ public class QuestionsController(QuestionDbContext db, IMessageBus bus, TagServi
         var question = await db.Questions.FindAsync(questionId);
         if (answer is null || question is null) return NotFound();
         if (answer.QuestionId != questionId || question.HasAcceptedAnswer) return BadRequest("Cannot accept answer");
-        
+
         answer.Accepted = true;
         question.HasAcceptedAnswer = true;
 
         await db.SaveChangesAsync();
-        
+
         await bus.PublishAsync(new AnswerAccepted(questionId));
         await bus.PublishAsync(ReputationHelper.MakeEvent(answer.UserId,
             ReputationReason.AnswerAccepted, question.AskerId));

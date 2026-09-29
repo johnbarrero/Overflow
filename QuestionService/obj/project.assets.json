@@ -48,14 +48,14 @@
           }
         }
       },
-      "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.5.3": {
+      "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.0.2": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": "10.0.11",
-          "Npgsql.DependencyInjection": "10.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore": "10.0.0",
+          "Npgsql.DependencyInjection": "10.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "10.0.0",
-          "Npgsql.OpenTelemetry": "10.0.2",
-          "OpenTelemetry.Extensions.Hosting": "1.15.3"
+          "Npgsql.OpenTelemetry": "10.0.0",
+          "OpenTelemetry.Extensions.Hosting": "1.9.0"
         },
         "compile": {
           "lib/net10.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
@@ -69,6 +69,36 @@
         },
         "build": {
           "buildTransitive/net10.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets": {}
+        }
+      },
+      "DistributedLock.Core/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/DistributedLock.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/DistributedLock.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DistributedLock.Postgres/1.3.0": {
+        "type": "package",
+        "dependencies": {
+          "DistributedLock.Core": "[1.0.8, 1.1.0)",
+          "Npgsql": "8.0.6"
+        },
+        "compile": {
+          "lib/net8.0/DistributedLock.Postgres.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/DistributedLock.Postgres.dll": {
+            "related": ".xml"
+          }
         }
       },
       "FastExpressionCompiler/5.3.0": {
@@ -104,7 +134,7 @@
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Humanizer.dll": {
             "related": ".xml"
           }
         },
@@ -290,7 +320,7 @@
       "Microsoft.Build.Framework/18.0.2": {
         "type": "package",
         "compile": {
-          "ref/net10.0/_._": {
+          "ref/net10.0/Microsoft.Build.Framework.dll": {
             "related": ".xml"
           }
         },
@@ -812,7 +842,10 @@
           "System.Composition": "9.0.0"
         },
         "compile": {
-          "lib/net9.0/_._": {}
+          "lib/net9.0/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll": {},
+          "lib/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll": {
+            "related": ".pdb;.xml"
+          }
         },
         "runtime": {
           "lib/net9.0/Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll": {},
@@ -869,11 +902,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/10.0.11": {
+      "Microsoft.EntityFrameworkCore/10.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.11",
-          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.11"
+          "Microsoft.EntityFrameworkCore.Abstractions": "10.0.9",
+          "Microsoft.EntityFrameworkCore.Analyzers": "10.0.9"
         },
         "compile": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.dll": {
@@ -889,7 +922,7 @@
           "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/10.0.11": {
+      "Microsoft.EntityFrameworkCore.Abstractions/10.0.9": {
         "type": "package",
         "compile": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
@@ -902,7 +935,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/10.0.11": {
+      "Microsoft.EntityFrameworkCore.Analyzers/10.0.9": {
         "type": "package"
       },
       "Microsoft.EntityFrameworkCore.Design/10.0.9": {
@@ -932,10 +965,10 @@
           "build/net10.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/10.0.11": {
+      "Microsoft.EntityFrameworkCore.Relational/10.0.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "10.0.11"
+          "Microsoft.EntityFrameworkCore": "10.0.9"
         },
         "compile": {
           "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll": {
@@ -996,7 +1029,7 @@
       "Microsoft.Extensions.DependencyModel/10.0.9": {
         "type": "package",
         "compile": {
-          "lib/net10.0/_._": {
+          "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
             "related": ".xml"
           }
         },
@@ -1025,10 +1058,10 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/10.0.11": {
+      "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.11"
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0"
         },
         "compile": {
           "lib/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll": {
@@ -1283,7 +1316,7 @@
       "Microsoft.VisualStudio.SolutionPersistence/1.0.52": {
         "type": "package",
         "compile": {
-          "lib/net8.0/_._": {
+          "lib/net8.0/Microsoft.VisualStudio.SolutionPersistence.dll": {
             "related": ".xml"
           }
         },
@@ -1299,13 +1332,42 @@
           "System.CodeDom": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {}
+          "lib/net6.0/Mono.TextTemplating.dll": {}
         },
         "runtime": {
           "lib/net6.0/Mono.TextTemplating.dll": {}
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "NetTopologySuite/2.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "NetTopologySuite.IO.PostGis/2.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NetTopologySuite": "[2.0.0, 3.0.0-A)"
+        },
+        "compile": {
+          "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll": {
+            "related": ".xml"
+          }
         }
       },
       "NewId/4.0.1": {
@@ -1334,7 +1396,7 @@
           }
         }
       },
-      "Npgsql/10.0.2": {
+      "Npgsql/10.0.0": {
         "type": "package",
         "compile": {
           "lib/net10.0/Npgsql.dll": {
@@ -1347,10 +1409,10 @@
           }
         }
       },
-      "Npgsql.DependencyInjection/10.0.2": {
+      "Npgsql.DependencyInjection/10.0.0": {
         "type": "package",
         "dependencies": {
-          "Npgsql": "10.0.2"
+          "Npgsql": "10.0.0"
         },
         "compile": {
           "lib/net8.0/Npgsql.DependencyInjection.dll": {
@@ -1381,10 +1443,28 @@
           }
         }
       },
-      "Npgsql.OpenTelemetry/10.0.2": {
+      "Npgsql.NetTopologySuite/9.0.4": {
         "type": "package",
         "dependencies": {
-          "Npgsql": "10.0.2",
+          "NetTopologySuite": "2.5.0",
+          "NetTopologySuite.IO.PostGIS": "2.1.0",
+          "Npgsql": "9.0.4"
+        },
+        "compile": {
+          "lib/net6.0/Npgsql.NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Npgsql.NetTopologySuite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Npgsql.OpenTelemetry/10.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Npgsql": "10.0.0",
           "OpenTelemetry.API": "1.14.0"
         },
         "compile": {
@@ -1616,7 +1696,7 @@
       "System.CodeDom/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.CodeDom.dll": {
             "related": ".xml"
           }
         },
@@ -1769,6 +1849,41 @@
           }
         }
       },
+      "Weasel.Core/8.4.2": {
+        "type": "package",
+        "dependencies": {
+          "JasperFx": "1.11.3"
+        },
+        "compile": {
+          "lib/net10.0/Weasel.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Weasel.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Weasel.Postgresql/8.4.2": {
+        "type": "package",
+        "dependencies": {
+          "DistributedLock.Postgres": "1.3.0",
+          "Npgsql": "9.0.4",
+          "Npgsql.NetTopologySuite": "9.0.4",
+          "Weasel.Core": "8.4.2"
+        },
+        "compile": {
+          "lib/net10.0/Weasel.Postgresql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Weasel.Postgresql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "WolverineFx/5.9.1": {
         "type": "package",
         "dependencies": {
@@ -1785,6 +1900,42 @@
         },
         "runtime": {
           "lib/net10.0/Wolverine.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "WolverineFx.EntityFrameworkCore/5.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "10.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "10.0.0",
+          "WolverineFx.RDBMS": "5.9.1"
+        },
+        "compile": {
+          "lib/net10.0/Wolverine.EntityFrameworkCore.dll": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.EntityFrameworkCore.dll": {
+            "related": ".runtimeconfig.json;.xml"
+          }
+        }
+      },
+      "WolverineFx.Postgresql/5.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Weasel.Postgresql": "8.4.2",
+          "WolverineFx.RDBMS": "5.9.1"
+        },
+        "compile": {
+          "lib/net10.0/Wolverine.Postgresql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.Postgresql.dll": {
             "related": ".xml"
           }
         }
@@ -1806,11 +1957,29 @@
           }
         }
       },
+      "WolverineFx.RDBMS/5.9.1": {
+        "type": "package",
+        "dependencies": {
+          "Weasel.Core": "8.4.2",
+          "WolverineFx": "5.9.1"
+        },
+        "compile": {
+          "lib/net10.0/Wolverine.RDBMS.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Wolverine.RDBMS.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Common/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "Aspire.Keycloak.Authentication": "13.5.3-preview.1.26425.3",
+          "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": "13.0.2",
           "Overflow.ServiceDefaults": "1.0.0",
           "Polly": "8.7.0",
           "WolverineFx.RabbitMQ": "5.9.1"
@@ -1934,10 +2103,10 @@
         "lib/net9.0/Aspire.Keycloak.Authentication.xml"
       ]
     },
-    "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.5.3": {
-      "sha512": "w2yuaPhTQsmFcEEvGGe4bKq919EfRwZ/TnXj3Cqrxers7pACv/9LUSXacGLggC3bkgJczKtx7SwL8RzsAm4ABA==",
+    "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL/13.0.2": {
+      "sha512": "4dVj+SxFoKohaMFv8w8occHRGcJp60td2VKNW82Ualy8XFAy1fSo29t+lxGxtS7VntIlS25zxRn0eQl41gig3g==",
       "type": "package",
-      "path": "aspire.npgsql.entityframeworkcore.postgresql/13.5.3",
+      "path": "aspire.npgsql.entityframeworkcore.postgresql/13.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1945,7 +2114,7 @@
         "Icon.png",
         "README.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "aspire.npgsql.entityframeworkcore.postgresql.13.5.3.nupkg.sha512",
+        "aspire.npgsql.entityframeworkcore.postgresql.13.0.2.nupkg.sha512",
         "aspire.npgsql.entityframeworkcore.postgresql.nuspec",
         "buildTransitive/net10.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets",
         "buildTransitive/net8.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.targets",
@@ -1956,6 +2125,46 @@
         "lib/net8.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.xml",
         "lib/net9.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.dll",
         "lib/net9.0/Aspire.Npgsql.EntityFrameworkCore.PostgreSQL.xml"
+      ]
+    },
+    "DistributedLock.Core/1.0.8": {
+      "sha512": "LAOsY8WxX8JU/n3lfXFz+f2pfnv0+4bHkCrOO3bwa28u9HrS3DlxSG6jf+u76SqesKs+KehZi0CndkfaUXBKvg==",
+      "type": "package",
+      "path": "distributedlock.core/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "distributedlock.core.1.0.8.nupkg.sha512",
+        "distributedlock.core.nuspec",
+        "lib/net462/DistributedLock.Core.dll",
+        "lib/net462/DistributedLock.Core.xml",
+        "lib/net8.0/DistributedLock.Core.dll",
+        "lib/net8.0/DistributedLock.Core.xml",
+        "lib/netstandard2.0/DistributedLock.Core.dll",
+        "lib/netstandard2.0/DistributedLock.Core.xml",
+        "lib/netstandard2.1/DistributedLock.Core.dll",
+        "lib/netstandard2.1/DistributedLock.Core.xml",
+        "package.readme.md"
+      ]
+    },
+    "DistributedLock.Postgres/1.3.0": {
+      "sha512": "CyjXmbhFgG30qPg4DwGnsmZO63y5DBRo+PI2xW0NwtFrsYsMVt/T1RcEUlb36JMKhDkf+euhnkanv/nU+W35qA==",
+      "type": "package",
+      "path": "distributedlock.postgres/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "distributedlock.postgres.1.3.0.nupkg.sha512",
+        "distributedlock.postgres.nuspec",
+        "lib/net462/DistributedLock.Postgres.dll",
+        "lib/net462/DistributedLock.Postgres.xml",
+        "lib/net8.0/DistributedLock.Postgres.dll",
+        "lib/net8.0/DistributedLock.Postgres.xml",
+        "lib/netstandard2.0/DistributedLock.Postgres.dll",
+        "lib/netstandard2.0/DistributedLock.Postgres.xml",
+        "lib/netstandard2.1/DistributedLock.Postgres.dll",
+        "lib/netstandard2.1/DistributedLock.Postgres.xml",
+        "package.readme.md"
       ]
     },
     "FastExpressionCompiler/5.3.0": {
@@ -3573,10 +3782,10 @@
         "microsoft.codeanalysis.workspaces.msbuild.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore/10.0.11": {
-      "sha512": "VOSGU8en6HZJs8t7UMFN+9vGcRgVOOn6fA44Ngcg2NyvJ3P1KE94iAb0XzaVaGhXGtt+qaM/VtEn0/hzluQJeg==",
+    "Microsoft.EntityFrameworkCore/10.0.9": {
+      "sha512": "tu85SRzOT021V7EQlViCiAE7TqldVn469Y6lt5TEn/+XC4/MeNCHgMRSxqYuWqvF4zAQZUhCmtNEZuM3ss4LeA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/10.0.11",
+      "path": "microsoft.entityframeworkcore/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3585,14 +3794,14 @@
         "buildTransitive/net10.0/Microsoft.EntityFrameworkCore.props",
         "lib/net10.0/Microsoft.EntityFrameworkCore.dll",
         "lib/net10.0/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.10.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.10.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/10.0.11": {
-      "sha512": "6auJR+9+9VunznKfH7WGrHMrnrmA0F7JZ22EXzwXvVhjfnbu9Xq7NSIWaOf3KJsOanM2qf5ajJ2JR5TlcPZTLA==",
+    "Microsoft.EntityFrameworkCore.Abstractions/10.0.9": {
+      "sha512": "GRMaiPkqYna/gCsyDffYDWmefGPC3hDrdMw+2rrGcQwhs6uZOsaMQXMJnoXQ35tx9SkBV2ieRRU9N/jLOO6BZw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/10.0.11",
+      "path": "microsoft.entityframeworkcore.abstractions/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3600,21 +3809,21 @@
         "PACKAGE.md",
         "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/net10.0/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.10.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.10.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/10.0.11": {
-      "sha512": "Bv7X4wSSnzCQED9WYXKJ8fwgyvKwf0xZM1GO8xkf6CF9zl+UBnvjxmcPnokJRy0JKjc1SlHSzzhx1HcL4jitTQ==",
+    "Microsoft.EntityFrameworkCore.Analyzers/10.0.9": {
+      "sha512": "aiEFB+C5EsZGqxvMPazE07hbWsp4iPaufJpanGt5O+lrwv7mJLrqma5haVIgFAPCyhQkmk75XSCEubT1zUjxtA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/10.0.11",
+      "path": "microsoft.entityframeworkcore.analyzers/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "docs/PACKAGE.md",
-        "microsoft.entityframeworkcore.analyzers.10.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.10.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
@@ -3634,10 +3843,10 @@
         "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/10.0.11": {
-      "sha512": "grznnTJgEYxaWpdKAsTzg6j+89jHgCXWYp+QGtlX5O92+w/VuhWM6JLPYb+uw8M9VhGUvOTsO76dYOy9vNPd5Q==",
+    "Microsoft.EntityFrameworkCore.Relational/10.0.9": {
+      "sha512": "dEoyYKgiaZHHgOFm1WMWm1sFEsEuhPWufX4L9PekKtqd/RaIcPjkCjvbrVvJtApErb5wPSJhYvnTlxhH+p9h2g==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/10.0.11",
+      "path": "microsoft.entityframeworkcore.relational/10.0.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3645,7 +3854,7 @@
         "PACKAGE.md",
         "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/net10.0/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.10.0.11.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.10.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
@@ -3774,10 +3983,10 @@
         "microsoft.extensions.diagnostics.exceptionsummarization.nuspec"
       ]
     },
-    "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/10.0.11": {
-      "sha512": "R3OADoj7geeFn7BYbw03milCTYgC57MeqGAUQtOOzB1fzYhZMl1grGAwz3wZdoYnD4/RIEYBbOy5PspZHlr7fQ==",
+    "Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore/10.0.0": {
+      "sha512": "ND74bTLuvcrhpEPQU8QZwOrq08zPPj76Ev/60SX1juVKLSSnbknXNoOzNYMPJn3xvhyDHmqU3Hvb/aYV3uvvhQ==",
       "type": "package",
-      "path": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.11",
+      "path": "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3786,7 +3995,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll",
         "lib/net10.0/Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.xml",
-        "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.11.nupkg.sha512",
+        "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.10.0.0.nupkg.sha512",
         "microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.nuspec"
       ]
     },
@@ -4176,6 +4385,35 @@
         "readme.md"
       ]
     },
+    "NetTopologySuite/2.5.0": {
+      "sha512": "5/+2O2ADomEdUn09mlSigACdqvAf0m/pVPGtIPEPQWnyrVykYY0NlfXLIdkMgi41kvH9kNrPqYaFBTZtHYH7Xw==",
+      "type": "package",
+      "path": "nettopologysuite/2.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/netstandard2.0/NetTopologySuite.dll",
+        "lib/netstandard2.0/NetTopologySuite.xml",
+        "nettopologysuite.2.5.0.nupkg.sha512",
+        "nettopologysuite.nuspec"
+      ]
+    },
+    "NetTopologySuite.IO.PostGis/2.1.0": {
+      "sha512": "3W8XTFz8iP6GQ5jDXK1/LANHiU+988k1kmmuPWNKcJLpmSg6CvFpbTpz+s4+LBzkAp64wHGOldSlkSuzYfrIKA==",
+      "type": "package",
+      "path": "nettopologysuite.io.postgis/2.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.dll",
+        "lib/netstandard2.0/NetTopologySuite.IO.PostGis.xml",
+        "lib/netstandard2.1/NetTopologySuite.IO.PostGis.dll",
+        "lib/netstandard2.1/NetTopologySuite.IO.PostGis.xml",
+        "nettopologysuite.io.postgis.2.1.0.nupkg.sha512",
+        "nettopologysuite.io.postgis.nuspec"
+      ]
+    },
     "NewId/4.0.1": {
       "sha512": "jegBasNndmG21G3BmT51suFDCIz/sLN81j+IxmkZ4iWoaDi8LygeHiyNnYbXz5OQh9nCRJFIx1+PJrlYi1Gc9Q==",
       "type": "package",
@@ -4221,10 +4459,10 @@
         "packageIcon.png"
       ]
     },
-    "Npgsql/10.0.2": {
-      "sha512": "q5RfBI+wywJSFUNDE1L4ZbHEHCFTblo8Uf6A6oe4feOUFYiUQXyAf9GBh5qEZpvJaHiEbpBPkQumjEhXCJxdrg==",
+    "Npgsql/10.0.0": {
+      "sha512": "xZAYhPOU2rUIFpV48xsqhCx9vXs6Y+0jX2LCoSEfDFYMw9jtAOUk3iQsCnDLrFIv9NT3JGMihn7nnuZsPKqJmA==",
       "type": "package",
-      "path": "npgsql/10.0.2",
+      "path": "npgsql/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4235,22 +4473,22 @@
         "lib/net8.0/Npgsql.xml",
         "lib/net9.0/Npgsql.dll",
         "lib/net9.0/Npgsql.xml",
-        "npgsql.10.0.2.nupkg.sha512",
+        "npgsql.10.0.0.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
     },
-    "Npgsql.DependencyInjection/10.0.2": {
-      "sha512": "/Efri6iP5Z2kj3amM/WPMoa0pzOBaIM+C+uMXltaBMu2hVZciNluuK51Mn2FmWKhqwTcMZdwHYUfbm8LbKRJMQ==",
+    "Npgsql.DependencyInjection/10.0.0": {
+      "sha512": "htuxMDQ7nHgadPxoO6XXVvSgYcVierLrhzOoamyUchvC4oHnYdD05zZ0dYsq80DN0vco9t/Vp+ZxYvnfJxbhIg==",
       "type": "package",
-      "path": "npgsql.dependencyinjection/10.0.2",
+      "path": "npgsql.dependencyinjection/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "lib/net8.0/Npgsql.DependencyInjection.dll",
         "lib/net8.0/Npgsql.DependencyInjection.xml",
-        "npgsql.dependencyinjection.10.0.2.nupkg.sha512",
+        "npgsql.dependencyinjection.10.0.0.nupkg.sha512",
         "npgsql.dependencyinjection.nuspec",
         "postgresql.png"
       ]
@@ -4270,17 +4508,32 @@
         "postgresql.png"
       ]
     },
-    "Npgsql.OpenTelemetry/10.0.2": {
-      "sha512": "kjc+3DzqjaFk0L3cmR92emyJd7GAgwSiiyuzvumHFEp0EVp6GbrtdIe0jD8NANdPVqYM8prH9ND8GQsQAFXCKA==",
+    "Npgsql.NetTopologySuite/9.0.4": {
+      "sha512": "7AwBLPz8EPmgAXveZ55K0Tz/9bNb8j4VI4pkTOQjyHrce8wWfAA9pefm3REidy+Kt2UFiAWef34YVi7sb/kB4A==",
       "type": "package",
-      "path": "npgsql.opentelemetry/10.0.2",
+      "path": "npgsql.nettopologysuite/9.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net6.0/Npgsql.NetTopologySuite.dll",
+        "lib/net6.0/Npgsql.NetTopologySuite.xml",
+        "npgsql.nettopologysuite.9.0.4.nupkg.sha512",
+        "npgsql.nettopologysuite.nuspec",
+        "postgresql.png"
+      ]
+    },
+    "Npgsql.OpenTelemetry/10.0.0": {
+      "sha512": "eftmCZWng874x4iSfQyfF+PpnfA6hloHGQ3EzELVhRyPOEHcMygxSXhx4KI8HKu/Qg8uK1MF5tcwOVhwL7duJw==",
+      "type": "package",
+      "path": "npgsql.opentelemetry/10.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "lib/net8.0/Npgsql.OpenTelemetry.dll",
         "lib/net8.0/Npgsql.OpenTelemetry.xml",
-        "npgsql.opentelemetry.10.0.2.nupkg.sha512",
+        "npgsql.opentelemetry.10.0.0.nupkg.sha512",
         "npgsql.opentelemetry.nuspec",
         "postgresql.png"
       ]
@@ -4882,6 +5135,40 @@
         "typesense.nuspec"
       ]
     },
+    "Weasel.Core/8.4.2": {
+      "sha512": "rCewCvbVNCrSKk9KCPmsYvXgHlYyg3+x8UUmXySaavnE1t7Pdd0JKJNLgI46sZmH91JglJB4OXFg9p0JPX28wQ==",
+      "type": "package",
+      "path": "weasel.core/8.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Weasel.Core.dll",
+        "lib/net10.0/Weasel.Core.xml",
+        "lib/net8.0/Weasel.Core.dll",
+        "lib/net8.0/Weasel.Core.xml",
+        "lib/net9.0/Weasel.Core.dll",
+        "lib/net9.0/Weasel.Core.xml",
+        "weasel.core.8.4.2.nupkg.sha512",
+        "weasel.core.nuspec"
+      ]
+    },
+    "Weasel.Postgresql/8.4.2": {
+      "sha512": "0N8RLPwxEwA7H6oiWCb40iRb38fS1WryKxRbe5rz0K5dMRAfqauo/1UFJDm/c0pJ6lnftKKyuDSF5MBf3Q3+Ag==",
+      "type": "package",
+      "path": "weasel.postgresql/8.4.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Weasel.Postgresql.dll",
+        "lib/net10.0/Weasel.Postgresql.xml",
+        "lib/net8.0/Weasel.Postgresql.dll",
+        "lib/net8.0/Weasel.Postgresql.xml",
+        "lib/net9.0/Weasel.Postgresql.dll",
+        "lib/net9.0/Weasel.Postgresql.xml",
+        "weasel.postgresql.8.4.2.nupkg.sha512",
+        "weasel.postgresql.nuspec"
+      ]
+    },
     "WolverineFx/5.9.1": {
       "sha512": "L8kSS9ik/DfPZuaQTHJ4OiQSGOlBwdlD4qedhyzaWSsGYXP4xCRxOnTSlYggY0lUYAllkMlw3sSBCsjm6jq85g==",
       "type": "package",
@@ -4899,6 +5186,43 @@
         "wolverinefx.nuspec"
       ]
     },
+    "WolverineFx.EntityFrameworkCore/5.9.1": {
+      "sha512": "c+e3RwAg9o4aPaVc5KEpcITPkUGxE2ghcJ+n0qOzgCE6SmsEPZb9L9kDg1N0cfLNYmaLK4brOr4ZWLOXFIqUNA==",
+      "type": "package",
+      "path": "wolverinefx.entityframeworkcore/5.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Wolverine.EntityFrameworkCore.dll",
+        "lib/net10.0/Wolverine.EntityFrameworkCore.runtimeconfig.json",
+        "lib/net10.0/Wolverine.EntityFrameworkCore.xml",
+        "lib/net8.0/Wolverine.EntityFrameworkCore.dll",
+        "lib/net8.0/Wolverine.EntityFrameworkCore.runtimeconfig.json",
+        "lib/net8.0/Wolverine.EntityFrameworkCore.xml",
+        "lib/net9.0/Wolverine.EntityFrameworkCore.dll",
+        "lib/net9.0/Wolverine.EntityFrameworkCore.runtimeconfig.json",
+        "lib/net9.0/Wolverine.EntityFrameworkCore.xml",
+        "wolverinefx.entityframeworkcore.5.9.1.nupkg.sha512",
+        "wolverinefx.entityframeworkcore.nuspec"
+      ]
+    },
+    "WolverineFx.Postgresql/5.9.1": {
+      "sha512": "ICyxepU6aT4+8LYkRFRFkUkmTfzHcAjdm0dJu5QvkVstmplDFN/OlqJCHfQ0ofEye8pP5g45Qni2Qu6r7Kieaw==",
+      "type": "package",
+      "path": "wolverinefx.postgresql/5.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Wolverine.Postgresql.dll",
+        "lib/net10.0/Wolverine.Postgresql.xml",
+        "lib/net8.0/Wolverine.Postgresql.dll",
+        "lib/net8.0/Wolverine.Postgresql.xml",
+        "lib/net9.0/Wolverine.Postgresql.dll",
+        "lib/net9.0/Wolverine.Postgresql.xml",
+        "wolverinefx.postgresql.5.9.1.nupkg.sha512",
+        "wolverinefx.postgresql.nuspec"
+      ]
+    },
     "WolverineFx.RabbitMQ/5.9.1": {
       "sha512": "tE5B2XFOlbEQaipSzh8sB+k9Z3wSJ/WGcyYRmLiepGiHJuwMogCaNXcmjf+9R48s69PvrmHuG/kfEESXhkq83g==",
       "type": "package",
@@ -4914,6 +5238,23 @@
         "lib/net9.0/Wolverine.RabbitMQ.xml",
         "wolverinefx.rabbitmq.5.9.1.nupkg.sha512",
         "wolverinefx.rabbitmq.nuspec"
+      ]
+    },
+    "WolverineFx.RDBMS/5.9.1": {
+      "sha512": "fMqgBSgTxvU6GfB0sjgKM7djgZ19mLppWgxDbI+RSEnWN/EZ3utjbiSsmmIFYxayqtp+1M2fXTAd98LDH5cGAQ==",
+      "type": "package",
+      "path": "wolverinefx.rdbms/5.9.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net10.0/Wolverine.RDBMS.dll",
+        "lib/net10.0/Wolverine.RDBMS.xml",
+        "lib/net8.0/Wolverine.RDBMS.dll",
+        "lib/net8.0/Wolverine.RDBMS.xml",
+        "lib/net9.0/Wolverine.RDBMS.dll",
+        "lib/net9.0/Wolverine.RDBMS.xml",
+        "wolverinefx.rdbms.5.9.1.nupkg.sha512",
+        "wolverinefx.rdbms.nuspec"
       ]
     },
     "Common/1.0.0": {
@@ -4939,13 +5280,14 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL >= 13.5.3",
       "Common >= 1.0.0",
       "Contracts >= 1.0.0",
       "HtmlSanitizer >= 9.0.967",
       "Microsoft.AspNetCore.OpenApi >= 10.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.9",
-      "Reputation >= 1.0.0"
+      "Reputation >= 1.0.0",
+      "WolverineFx.EntityFrameworkCore >= 5.9.1",
+      "WolverineFx.Postgresql >= 5.9.1"
     ]
   },
   "packageFolders": {
@@ -5002,10 +5344,6 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
-          "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL": {
-            "target": "Package",
-            "version": "[13.5.3, )"
-          },
           "HtmlSanitizer": {
             "target": "Package",
             "version": "[9.0.967, )"
@@ -5019,6 +5357,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[10.0.9, )"
+          },
+          "WolverineFx.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[5.9.1, )"
+          },
+          "WolverineFx.Postgresql": {
+            "target": "Package",
+            "version": "[5.9.1, )"
           }
         },
         "imports": [

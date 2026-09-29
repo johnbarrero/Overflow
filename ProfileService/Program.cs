@@ -48,20 +48,40 @@ app.MapGet("/profiles/batch", async (string ids, ProfileDbContext db) =>
     
     return Results.Ok(rows);
 });
-
-using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
-try
+app.MapGet("profiles", async (string? sortBy, ProfileDbContext db) =>
 {
-    var context = services.GetRequiredService<ProfileDbContext>();
-    await context.Database.MigrateAsync();
-}
-catch (Exception e)
+    var query = db.UserProfiles.AsQueryable();
+
+    query = sortBy == "reputation" 
+        ? query.OrderByDescending(x => x.Reputation) 
+        : query.OrderBy(x => x.DisplayName);
+    
+    return await query.ToListAsync();
+});
+
+app.MapGet("profiles/{id}", async (string id, ProfileDbContext db) =>
 {
-    var logger = services.GetRequiredService<ILogger<Program>>();
-    logger.LogError(e, "An error occurred seeding the DB.");
-}
+    var profile = await db.UserProfiles.FindAsync(id);
 
+    return profile is null ? Results.NotFound() : Results.Ok(profile);
+});
 
+app.MapPut("/profiles/edit", async (EditProfileDto dto, ClaimsPrincipal user, ProfileDbContext db) =>
+{
+    var userId = user.FindFirstValue(ClaimTypes.NameIdentifier);
+    if (userId is null) return Results.Unauthorized();
+    
+    var profile = await db.UserProfiles.FindAsync(userId);
+    if (profile is null) return Results.NotFound();
+
+    profile.DisplayName = dto.DisplayName ?? profile.DisplayName;
+    profile.Description = dto.Description ?? profile.Description;
+    
+    await db.SaveChangesAsync();
+    
+    return Results.NoContent();
+}).RequireAuthorization();
+
+await app.MigrateDbContextAsync<ProfileDbContext>();
+    
 app.Run();
-
